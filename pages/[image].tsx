@@ -10,7 +10,7 @@ const ImagePage = ({ imageUrl, found }: any) => {
 				{/* <link rel="icon" href="/favicon.ico" /> */}
 				{/* <meta name="description" content="he uploads them on this website" /> */}
 				{/* <meta property="theme-color" content={color} /> */}
-				{/* <meta property="twitter:card" content="summary_large_image" /> */}
+				<meta property="twitter:card" content="summary_large_image" />
 				{/* <meta property="og:type" content="website" /> */}
 				<meta property="og:url" content={imageUrl} />
 				<meta property="og:image" content={imageUrl} />
