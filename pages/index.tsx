@@ -17,11 +17,12 @@ export default function Home() {
 				</h1>
 
 				<p className={styles.description}>
-					Get started by editing{' '}
-					<code className={styles.code}>pages/index.js</code>
+					Get started by joining{' '}
+					<a href="https://discord.gg/mY8zTARu4g">the discord</a> and pinging
+					tricked to get access
 				</p>
 
-				<div className={styles.grid}>
+				{/* <div className={styles.grid}>
 					<a href="/docs" className={styles.card}>
 						<h2>Documentation &rarr;</h2>
 						<p>How to use this yourself to upload your own images</p>
@@ -49,15 +50,11 @@ export default function Home() {
 							Instantly deploy your Next.js site to a public URL with Vercel.
 						</p>
 					</a>
-				</div>
+				</div> */}
 			</main>
 
 			<footer className={styles.footer}>
-				<a
-					href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-					target="_blank"
-					rel="noopener noreferrer"
-				>
+				<a href="https://vercel.com" target="_blank" rel="noopener noreferrer">
 					Powered by{' '}
 					<span className={styles.logo}>
 						<Image src="/vercel.svg" alt="Vercel Logo" width={72} height={16} />
