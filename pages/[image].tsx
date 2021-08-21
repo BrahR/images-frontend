@@ -59,20 +59,6 @@ ImagePage.getInitialProps = async ({ query: { image } }: { query: any }) => {
 		process.env.BACKENDURL || 'http://localhost:3000'
 	}/view/${image}`;
 	const e = await fetch(imageUrl);
-
-	// const res = await fetch(imageUrl);
-	// res.headers.get("")
-	// console.log(await res.text());
-	// const img = await res.buffer().then((r) => r.toString('base64'));
-	// const colors = [
-	// 	'#0FF1CE',
-	// 	'#FF0000',
-	// 	'#8A2BE2',
-	// 	'#00CED1',
-	// 	'#088DA5',
-	// 	'#aa250a',
-	// ];
-
 	return { imageUrl: imageUrl, found: e.status == 404 };
 };
 export default ImagePage;
