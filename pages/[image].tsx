@@ -73,7 +73,7 @@ const ImagePage = ({ imageUrl, found, data }: any) => {
 };
 ImagePage.getInitialProps = async ({ query: { image } }: { query: any }) => {
 	const imageUrl = `${
-		process.env.BACKENDURL || 'http://localhost:3000'
+		process.env.BACKENDURL || 'https://sogga.herokuapp.com'
 	}/view/${image}`;
 	const e = await fetch(imageUrl + '/stats');
 	return { imageUrl: imageUrl, found: e.status == 404, data: await e.json() };

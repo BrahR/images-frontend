@@ -17,7 +17,7 @@
 	align-items: center;
 }
 .image {
-	width: 35vw;
+	width: auto;
 	height: auto;
 }
 
@@ -38,7 +38,7 @@
 }
 
 .title a {
-	color: #0070f3;
+	color: #bef300;
 	text-decoration: none;
 }
 
@@ -64,7 +64,7 @@
 	font-size: 1.5rem;
 }
 .description a {
-	color: #0070f3;
+	color: #f3db00;
 	text-decoration: none;
 }
 
