@@ -6,9 +6,9 @@ export default function Home() {
 	return (
 		<div className={styles.container}>
 			<Head>
-				<title>Tricked images on vercel</title>
+				<title>Sogga Image Uploader</title>
 				<meta name="description" content="very cool" />
-				<link rel="icon" href="/favicon.ico" />
+				{/* <link rel="icon" href="/favicon.ico" /> */}
 			</Head>
 
 			<main className={styles.main}>
