@@ -8,7 +8,7 @@ export default function Home() {
 			<Head>
 				<title>Sogga Image Uploader</title>
 				<meta name="description" content="very cool" />
-				{/* <link rel="icon" href="/favicon.ico" /> */}
+				<link rel="icon" href="/favicon.ico" />
 			</Head>
 
 			<main className={styles.main}>
