@@ -60,21 +60,21 @@
 	display: flex;
 	justify-content: center;
 	text-align: center;
-	height: auto;
 }
+
 .item {
 	padding-left: 2vw;
 	padding-right: 2vw;
 
-	height: 22vw;
+	height: 50vh;
 	width: 30vw;
 }
 .image {
-	height: 10vh;
+	height: 20vh;
 	width: 100%;
 }
 .cardbody {
-	height: 19vh;
+	height: 30vh;
 	width: 100%;
 }
 .description {
@@ -176,17 +176,17 @@
 	}
 	.item {
 		width: 90vw;
-		flex: 0 0 90.333333%;
+		flex: 0 0 100%;
 	}
 	.image {
-		height: 20vw;
+		height: 20vh;
 		width: 100%;
 	}
-	.MuiCard-root {
+	/* .MuiCard-root {
 		width: 90vw;
-		height: 50vw;
+		height: 50vh;
 		flex: 0 0 90.333333%;
-	}
+	} */
 }
 
 @media (max-width: 600px) {

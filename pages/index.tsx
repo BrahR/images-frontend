@@ -1,12 +1,9 @@
 import Head from "next/head";
-import Image from "next/image";
 import styles from "../styles/Home.module.css";
 import Card from "@material-ui/core/Card";
-import CardActionArea from "@material-ui/core/CardActionArea";
-import CardActions from "@material-ui/core/CardActions";
+import CardActionArea from "@material-ui/core/CardActionArea"
 import CardContent from "@material-ui/core/CardContent";
 import CardMedia from "@material-ui/core/CardMedia";
-import Button from "@material-ui/core/Button";
 import Typography from "@material-ui/core/Typography";
 export default function Home() {
 	return (
@@ -35,14 +32,14 @@ export default function Home() {
 				</div>
 			</main>
 
-			<footer className={styles.footer}>
+			{/* <footer className={styles.footer}>
 				<a href="https://vercel.com" target="_blank" rel="noopener noreferrer">
 					Powered by{" "}
 					<span className={styles.logo}>
 						<Image src="/vercel.svg" alt="Vercel Logo" width={72} height={16} />
 					</span>
 				</a>
-			</footer>
+			</footer> */}
 		</div>
 	);
 }
