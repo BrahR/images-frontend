@@ -7,10 +7,10 @@ const ImagePage = ({ imageUrl, found, data }: any) => {
 		<div className={styles.coolbackground}>
 			<div className={styles.container}>
 				<Head>
-					{!found ? (
+					{found ? (
 						""
 					) : !data.embed ? (
-						""
+						<meta property="og:url" content={imageUrl} />
 					) : (
 						<>
 							{data.embed.title ? <title>{data.embed.title}</title> : ""}
@@ -25,7 +25,7 @@ const ImagePage = ({ imageUrl, found, data }: any) => {
 					{/* <meta property="og:type" content="website" /> */}
 					<meta property="twitter:card" content="summary_large_image" />
 					<link rel="icon" href="/favicon.ico" />
-					<meta property="og:url" content={imageUrl} />
+
 					<meta property="og:image" content={imageUrl} />
 				</Head>
 				<style jsx global>{`
