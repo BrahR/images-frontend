@@ -1,7 +1,7 @@
 .container {
 	min-height: 100vh;
 	padding: 0 0.5rem;
-	display: flex;
+
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
@@ -11,7 +11,6 @@
 .main {
 	padding: 5 rem 0;
 	flex: 1;
-	display: flex;
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
@@ -57,9 +56,27 @@
 
 .title,
 .description {
+	font-family: "Sigmar One", cursive;
+	display: flex;
+	justify-content: center;
 	text-align: center;
+	height: auto;
 }
+.item {
+	padding-left: 2vw;
+	padding-right: 2vw;
 
+	height: 22vw;
+	width: 30vw;
+}
+.image {
+	height: 10vh;
+	width: 100%;
+}
+.cardbody {
+	height: 19vh;
+	width: 100%;
+}
 .description {
 	line-height: 1.5;
 	font-size: 1.5rem;
@@ -74,8 +91,7 @@
 	border-radius: 5px;
 	padding: 0.75rem;
 	font-size: 1.1rem;
-	font-family: Menlo, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono,
-		Bitstream Vera Sans Mono, Courier New, monospace;
+	font-family: Menlo, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono, Bitstream Vera Sans Mono, Courier New, monospace;
 }
 
 .grid {
@@ -149,6 +165,28 @@
 .logo {
 	height: 1em;
 	margin-left: 0.5rem;
+}
+@media (max-width: 700px) {
+	.title,
+	.description {
+		font-family: "Sigmar One", cursive;
+		flex-wrap: wrap;
+		justify-content: center;
+		text-align: center;
+	}
+	.item {
+		width: 90vw;
+		flex: 0 0 90.333333%;
+	}
+	.image {
+		height: 20vw;
+		width: 100%;
+	}
+	.MuiCard-root {
+		width: 90vw;
+		height: 50vw;
+		flex: 0 0 90.333333%;
+	}
 }
 
 @media (max-width: 600px) {
