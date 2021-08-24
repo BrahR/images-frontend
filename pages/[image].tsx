@@ -50,7 +50,7 @@ const ImagePage = ({ imageUrl, found, data }: any) => {
 						<h2>
 							Captured by {`${data.user.name}`} amount of {`${data.user.name}`} images: {`${data.user.uploads}`}
 						</h2>
-						<img src={imageUrl} alt="" className={styles.image} onClick={() => window.open(imageUrl)} />
+						<img src={imageUrl} alt="" className={styles.okimage} onClick={() => window.open(imageUrl)} />
 					</main>
 				) : (
 					"IMAGE NOT FOUND"
