@@ -88,3 +88,18 @@ header div {
 		justify-content: center;
 	}
 }
+
+/* images shit */
+.white {
+	color: white;
+}
+
+.okimage {
+	min-height: 2rem;
+	max-height: 70rem;
+	min-width: 2rem;
+	max-width: 70rem;
+	width: auto;
+	height: auto;
+	cursor: pointer;
+}
