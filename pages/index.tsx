@@ -155,7 +155,7 @@ export default function Home({ rules, privacy, faq }: any) {
 								</div>
 								<div className={styles.HomeDescription}>
 									<p>
-										Get started by joining <a href="ttps://discord.gg/mY8zTARu4g">The Discord server</a> and pining tricked to get access
+										Get started by joining <a href="ttps://discord.gg/mY8zTARu4g">The Discord server</a> and pinging tricked to get access
 									</p>
 								</div>
 							</header>
