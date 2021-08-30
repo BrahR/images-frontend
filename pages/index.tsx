@@ -208,14 +208,14 @@ export async function getStaticProps() {
 	Sogga images has the following rules
 
 	Upload rules
-		- No form of porm is allowed
+		- No form of porn is allowed
 		- Dont spam uploads
 		- Uploading malware is not allowed
 	`;
 	const mdxSource = await serialize(rules);
 	const privacyPolicy = `
 	What data do we save: 
-	    - All images uploading are saved supabase
+	    - All images uploaded are saved supabase
 		- You account is stored on supabase
 		- Other than that no information is collected
 	
