@@ -61,8 +61,8 @@ const ImagePage = ({ imageUrl, found, data }: any) => {
 		</div>
 	);
 };
-ImagePage.getInitialProps = async ({ query: { image } }: { query: any }) => {
-	const imageUrl = `${process.env.BACKENDURL || "https://sogga.herokuapp.com"}/view/${image}`;
+ImagePage.getInitialProps = async ({ query: { image } }: any) => {
+	const imageUrl = `${process.env.BACKENDURL || "https://sogga.herokuapp.com"}/view/${image[image.length - 1]}`;
 	const e = await fetch(imageUrl + "/stats");
 	return { imageUrl: imageUrl, found: e.status == 404, data: await e.json() };
 };
