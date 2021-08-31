@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Sigmar+One&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Kalam&display=swap");
 * {
 	padding: 0;
 	margin: 0;
@@ -13,7 +13,6 @@ header div {
 	display: flex;
 	justify-content: center;
 	align-items: center;
-
-	font-family: Sigmar One, cursive;
+	font-family: Kalam, Sigmar One, cursive;
 	text-align: center;
 }

@@ -135,69 +135,68 @@ export default function Home({ rules, privacy, faq }: any) {
 
 	return (
 		<ThemeProvider theme={theme}>
-			<div className={styles.troocked}>
-				<div className={classes.root}>
-					<AppBar position="static">
-						<Tabs value={value} onChange={handleChange} aria-label="simple tabs example">
-							<Tab label="Features" {...a11yProps(0)} />
-							<Tab label="Rules" {...a11yProps(1)} />
-							<Tab label="Privacy" {...a11yProps(2)} />
-							<Tab label="Faq" {...a11yProps(3)} />
-						</Tabs>
-					</AppBar>
-					<TabPanel value={value} index={0}>
-						<Paper>
-							<header>
-								<div>
-									<h1 className={styles.HomeTitle}>
-										Welcome to&nbsp;<a href="https://discord.gg/KkMKCchJb8">Sogga images!</a>
-									</h1>
-								</div>
-								<div className={styles.HomeDescription}>
-									<p>
-										Get started by joining <a href="ttps://discord.gg/mY8zTARu4g">The Discord server</a> and pinging tricked to get access
-									</p>
-								</div>
-							</header>
-							<div className={styles.Container}>
-								<div className={styles.CardHolder}>
-									<div className={styles.HomeCards}>
-										{features.map(x => makeCard(x.title, x.description, x.image)
 
-										)}
-									</div>
-								</div>
+			<AppBar position="static">
+				<Tabs value={value} onChange={handleChange} aria-label="simple tabs example">
+					<Tab label="Features" {...a11yProps(0)} />
+					<Tab label="Rules" {...a11yProps(1)} />
+					<Tab label="Privacy" {...a11yProps(2)} />
+					<Tab label="Faq" {...a11yProps(3)} />
+				</Tabs>
+			</AppBar>
+			<TabPanel value={value} index={0}>
+				<Paper>
+					<header>
+						<div>
+							<h1 className={styles.HomeTitle}>
+								Welcome to&nbsp;<a href="https://discord.gg/KkMKCchJb8">Sogga images!</a>
+							</h1>
+						</div>
+						<div className={styles.HomeDescription}>
+							<p>
+								Get started by joining <a href="ttps://discord.gg/mY8zTARu4g">The Discord server</a> and pinging tricked to get access
+							</p>
+						</div>
+					</header>
+					<div className={styles.Container}>
+						<div className={styles.CardHolder}>
+							<div className={styles.HomeCards}>
+								{features.map(x => makeCard(x.title, x.description, x.image)
+
+								)}
 							</div>
-						</Paper>
-					</TabPanel>
-					<TabPanel value={value} index={1}>
-						<Paper className={classes.padded}>
-							<Typography paragraph={true} noWrap>
-								<MDXRemote {...rules} components={components} />
-							</Typography>
-						</Paper>
-					</TabPanel>
-					<TabPanel value={value} index={2}>
-						<Paper className={classes.padded}>
-							<Typography paragraph={true} noWrap>
-								<MDXRemote {...privacy} components={components} />
-							</Typography>
-						</Paper>
-					</TabPanel>
-					<TabPanel value={value} index={3}>
-						<Paper className={classes.padded}>
-							<Typography paragraph={true} noWrap>
-								<MDXRemote {...faq} components={components} />
-							</Typography>
-						</Paper>
-					</TabPanel>
-				</div>
-				<Head>
-					<title>Sogga Image Uploader</title>
-					<meta name="description" content="A image uploader made to be quick" />
-					<link rel="icon" href="/favicon.ico" />
-				</Head>
-			</div>
+						</div>
+					</div>
+				</Paper>
+			</TabPanel>
+			<TabPanel value={value} index={1}>
+				<Paper className={classes.padded}>
+					<Typography paragraph={true} noWrap>
+						<MDXRemote {...rules} components={components} />
+					</Typography>
+				</Paper>
+			</TabPanel>
+			<TabPanel value={value} index={2}>
+				<Paper className={classes.padded}>
+					<Typography paragraph={true} noWrap>
+						<MDXRemote {...privacy} components={components} />
+					</Typography>
+				</Paper>
+			</TabPanel>
+			<TabPanel value={value} index={3}>
+				<Paper className={classes.padded}>
+					<Typography paragraph={true} noWrap>
+						<MDXRemote {...faq} components={components} />
+					</Typography>
+				</Paper>
+			</TabPanel>
+
+			<Head>
+				<title>Sogga Image Uploader</title>
+				<meta name="description" content="A image uploader made to be quick" />
+				<link rel="icon" href="/favicon.ico" />
+			</Head>
+
 		</ThemeProvider>
 	);
 }
