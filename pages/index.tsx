@@ -17,12 +17,10 @@ import CardContent from "@material-ui/core/CardContent";
 import CardMedia from "@material-ui/core/CardMedia";
 import Button from "@material-ui/core/Button";
 import Paper from "@material-ui/core/Paper";
-import { serialize } from 'next-mdx-remote/serialize'
-import { MDXRemote } from 'next-mdx-remote'
+import { serialize } from "next-mdx-remote/serialize";
+import { MDXRemote } from "next-mdx-remote";
 
-
-const components = { typo: Typography }
-
+const components = { typo: Typography };
 
 interface TabPanelProps {
 	children?: React.ReactNode;
@@ -68,30 +66,28 @@ const useStyles = makeStyles((theme: Theme) => ({
 		maxWidth: 400,
 	},
 	padded: {
-		padding: "1rem 1rem 1rem 1rem"
-	}
+		padding: "1rem 1rem 1rem 1rem",
+	},
 }));
-
 
 //Code stalker note feel free to suggest new features
 const features = [
 	{
 		title: "Easily change your settings",
 		description: "You can do change everything via discord,\nmaking it the perfect image uploader for people who dont want to visit a whole new site to just chane some settings",
-		image: "/embeds.png"
+		image: "/embeds.png",
 	},
 	{
 		title: "Changing domains",
 		description: "You can easily change your domain from inside discord with just 1 slash command,",
-		image: "/domains.png"
-
+		image: "/domains.png",
 	},
 	{
 		title: "So what are you waiting for",
 		description: "Start now! by joining the discord, asking for a code and redeeming it its that simple!",
-		image: "/redeem.png"
-	}
-]
+		image: "/redeem.png",
+	},
+];
 export default function Home({ rules, privacy, faq }: any) {
 	const classes = useStyles();
 	const [value, setValue] = React.useState(0);
@@ -135,7 +131,6 @@ export default function Home({ rules, privacy, faq }: any) {
 
 	return (
 		<ThemeProvider theme={theme}>
-
 			<AppBar position="static">
 				<Tabs value={value} onChange={handleChange} aria-label="simple tabs example">
 					<Tab label="Features" {...a11yProps(0)} />
@@ -160,11 +155,7 @@ export default function Home({ rules, privacy, faq }: any) {
 					</header>
 					<div className={styles.Container}>
 						<div className={styles.CardHolder}>
-							<div className={styles.HomeCards}>
-								{features.map(x => makeCard(x.title, x.description, x.image)
-
-								)}
-							</div>
+							<div className={styles.HomeCards}>{features.map((x) => makeCard(x.title, x.description, x.image))}</div>
 						</div>
 					</div>
 				</Paper>
@@ -196,7 +187,6 @@ export default function Home({ rules, privacy, faq }: any) {
 				<meta name="description" content="A image uploader made to be quick" />
 				<link rel="icon" href="/favicon.ico" />
 			</Head>
-
 		</ThemeProvider>
 	);
 }
@@ -220,13 +210,13 @@ export async function getStaticProps() {
 	
 	How can i request data deletion: 
 		- You need to dm tricked#3777 on discord
-		- or send a emailt to trickedcodes@tutanota.com
+		- or send a email to trickedcodes@tutanota.com
 
 	How can i contact you for privacy concerns
 		- You need to dm tricked#3777 on discord
 		- or send a emailt to trickedcodes@tutanota.com
 
-	`
+	`;
 	const privacy = await serialize(privacyPolicy);
 	const FAQ = `
 			
@@ -264,8 +254,7 @@ export async function getStaticProps() {
 			- The backend is made using fastify, the bot is made using fastify too and is hosted on the same project
 			- If you have any idea how to improve on this in a "free" way feel free to dm me
 
-			`
+			`;
 	const faq = await serialize(FAQ);
-	console.log(faq)
 	return { props: { rules: mdxSource, privacy: privacy, faq: faq } };
 }
