@@ -66,6 +66,23 @@ const useStyles = makeStyles((theme: Theme) =>
 			flexGrow: 1,
 			padding: theme.spacing(3),
 		},
+		docs: {
+			"& a:link": {
+				color: "rgba(255, 251, 0, 0.8)",
+			},
+
+			"& a:visited": {
+				color: "green",
+			},
+
+			"& a:hover": {
+				color: "#b7f4f8",
+			},
+
+			"& a:active": {
+				color: "blue",
+			},
+		},
 	})
 );
 function Cursed({ input }: any) {
@@ -109,7 +126,7 @@ export default function Doc({ doc, docs }: any) {
 			</Drawer>
 			<main className={classes.content}>
 				<Toolbar />
-				<Typography paragraph>
+				<Typography paragraph className={classes["docs"]}>
 					<Cursed input={doc.content} />
 				</Typography>
 			</main>
