@@ -16,3 +16,11 @@ header div {
 	font-family: Kalam, Sigmar One, cursive;
 	text-align: center;
 }
+
+ul > li {
+	margin-left: 10px;
+}
+
+ul {
+	margin-left: 10px;
+}
