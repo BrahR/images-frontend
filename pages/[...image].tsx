@@ -60,14 +60,17 @@ const ImagePage = ({ imageUrl, found, data }: any) => {
 		</div>
 	);
 };
-ImagePage.getInitialProps = async ({ query: { image } }: any) => {
+ImagePage.getInitialProps = async ({ res, req, query: { image } }: any) => {
 	const imageUrl = `${process.env.BACKENDURL || "https://sogga.herokuapp.com"}/view/${image[image.length - 1]}`;
 	const e = await fetch(imageUrl + "/stats");
 	let data = await e.json();
-	if (data.redirect) {
+	if (data?.redirect) {
+		res.writeHead(308, { Location: data.redirect });
+		res.end();
 		return {
+			fount: false,
 			redirect: {
-				destination: data.redirect,
+				destination: "/",
 				permanent: false,
 			},
 		};
