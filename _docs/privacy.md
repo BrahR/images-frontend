@@ -1,20 +1,20 @@
 ---
-title: privacy
-description: Privacy policy of sogga images
+title: Privacy
+description: Privacy policy of Sogga Images
 ---
 
-### What data do we save:
+### What data do we save?
 
--   All images uploaded are saved supabase
--   You account is stored on supabase
--   Other than that no information is collected
+-   All images uploaded are saved on Supabase.
+-   Your account is stored on Supabase.
+-   No other information is collected.
 
-### How can i request data deletion:
+### How can I request data deletion?
 
--   You need to dm tricked#3777 on discord
--   or send a email to trickedcodes@tutanota.com
+-   tricked#3777 on Discord.
+-   If you prefer, you can send an email instead to trickedcodes@tutanota.com.
 
-### How can i contact you for privacy concerns
+### How can I contact you for privacy concerns?
 
--   You need to dm tricked#3777 on discord
--   or send a emailt to trickedcodes@tutanota.com
+-   DM tricked#3777 on Discord.
+-   If you prefer, you can send an email instead to trickedcodes@tutanota.com.

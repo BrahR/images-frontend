@@ -1,13 +1,13 @@
 ---
-title: rules
-description: Sogga images rules
+title: Rules
+description: Sogga Images rules
 ---
 
 ### Rules
 
-Sogga images has the following rules
+Sogga Images has the following rules:
 
 -   Uploading rules
-    -   No form of porn is allowed
-    -   Dont spam uploads
-    -   Uploading malware is not allowed
+    -   No form of pornography is allowed.
+    -   Spamming uploads is not allowed.
+    -   Uploading malware is not allowed.

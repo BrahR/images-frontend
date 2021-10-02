@@ -34,17 +34,17 @@ const useStyles = makeStyles((theme: Theme) => ({
 const features = [
 	{
 		title: "Easily change your settings",
-		description: "You can do change everything via discord,\nmaking it the perfect image uploader for people who dont want to visit a whole new site to just chane some settings",
+		description: "You can change everything via Discord,\nmaking it the perfect image uploader for people who don't want to visit a confusing or cluttered site to just change some settings.",
 		image: "/embeds.png",
 	},
 	{
 		title: "Changing domains",
-		description: "You can easily change your domain from inside discord with just 1 slash command,",
+		description: "You can easily change your domain from inside Discord with a single slash command.",
 		image: "/domains.png",
 	},
 	{
-		title: "So what are you waiting for",
-		description: "Start now! by joining the discord, asking for a code and redeeming it its that simple!",
+		title: "What are you waiting for?",
+		description: "Start now by joining the Discord, asking for a code and redeeming it! It's that simple.",
 		image: "/redeem.png",
 	},
 ];
@@ -80,12 +80,12 @@ export default function Home() {
 				<header>
 					<div>
 						<h1 className={styles.HomeTitle}>
-							Welcome to&nbsp;<a href="https://discord.gg/KkMKCchJb8">Sogga images!</a>
+							Welcome to&nbsp;<a href="https://discord.gg/KkMKCchJb8">Sogga Images!</a>
 						</h1>
 					</div>
 					<div className={styles.HomeDescription}>
 						<p>
-							Get started by joining <a href="ttps://discord.gg/mY8zTARu4g">The Discord server</a> and pinging tricked to get access
+							Get started by joining <a href="ttps://discord.gg/mY8zTARu4g">the Discord server</a> and pinging tricked to get access
 						</p>
 					</div>
 				</header>
@@ -98,7 +98,7 @@ export default function Home() {
 
 			<Head>
 				<title>Sogga Image Uploader</title>
-				<meta name="description" content="A image uploader made to be quick" />
+				<meta name="description" content="An image uploader made to be quick" />
 				<link rel="icon" href="/favicon.ico" />
 			</Head>
 		</>
