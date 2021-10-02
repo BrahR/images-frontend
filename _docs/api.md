@@ -1,44 +1,44 @@
 ---
-title: api
-description: sogga images api documentation
+title: API
+description: Sogga Images API documentation
 ---
 
 ### baseurl = https://api.tricked.pro/images
 
 <br></br>
-api paths:
+API Paths:
 
 ---
 
 <br></br>
 `/upload`  
-upload a image this requires a image to be in the formdata
+Upload a image. This requires an image to be in the formdata.
 <br></br>
 
 ---
 
 <br></br>
 `/download/:user/:key`  
-download a image
+Download an image.
 <br></br>
 
 ---
 
 <br></br>
 `/delete/:user/:key/:image`  
-delete a image image has to be the vanity
+Delete a image. Image has to be the vanity.
 <br></br>
 
 ---
 
 <br></br>
 `/view/image`  
-sends the image
+Sends the image.
 <br></br>
 
 ---
 
 <br></br>
 `/view/image/stats`  
-get some information about the image
+Get some information about the image.
 <br></br>

@@ -1,22 +1,22 @@
 ---
-title: adding a domain
-description: this is a guide on how to get your domain added to sogga images
+title: Adding a domain
+description: This is a guide on how to get your domain added to Sogga Images
 ---
 
-### How to get your domain added to soggaimages
+### How to get your domain added to Sogga Images
 
-#### 1
+### Step 1
 
-send a dm to tricked#3777 telling him what domain you want added and it should be a [wildcard](https://en.wikipedia.org/wiki/Wildcard_DNS_record) domain
+Send a DM to tricked#3777 telling him what domain you want added. It should be a [Wildcard](https://en.wikipedia.org/wiki/Wildcard_DNS_record) domain
 
-### 2
+### Step 2
 
-if you want a [wildcard](https://en.wikipedia.org/wiki/Wildcard_DNS_record) domain added you are going to have to point your name server to vercel's server (tricked will send you which)
+If you want a [Wildcard](https://en.wikipedia.org/wiki/Wildcard_DNS_record) domain added you are going to have to point your name server to Vercel. (tricked will send you the nameservers.)
 
-if you want just a single subdomain or domain added your gonna have to make a cname record to vercel (tricked will tell which url)
+If you just want a single subdomain or domain added, you're going to need to make a CNAME record to Vercel. (tricked will tell you the URL.)
 
-### 3
+### Step 3
 
-after all that the bot will be updated to have your domain added to the domain list
+After all of that, the Discord Bot will be updated to have your domain added to the domain list.
 
-if you want it to just be used by you thats fine too just make sure to mention it
+If you want it to be only used by you, that's fine. Just make sure to tell tricked.

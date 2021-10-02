@@ -1,9 +1,9 @@
 ---
-title: welcome
-description: welcome to the sogga images docs
+title: Welcome
+description: Welcome to the Sogga Images documentation
 ---
 
-### Welcome to the sogga images documentation
+### Welcome to the Sogga Images documentation.
 
-This whole website is opensource so if you see any typos ( most likely ), bad wording or want to add things you can make a pull request to the repository [github.com/SkyBlockDev/images-frontend/](https://github.com/SkyBlockDev/images-frontend/).  
-The doucmentation is in the [\_docs](https://github.com/SkyBlockDev/images-frontend/_docs) folder
+This whole website is open-source, so if you see any typos, bad wording, or just want to add things you can make a pull request to the repository [github.com/SkyBlockDev/images-frontend/](https://github.com/SkyBlockDev/images-frontend/).  
+The documentation is in the [\_docs](https://github.com/SkyBlockDev/images-frontend/_docs) folder.

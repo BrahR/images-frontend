@@ -1,19 +1,19 @@
 ---
-title: faq
-description: Sogga images faq
+title: FAQ
+description: Sogga Images FAQ
 ---
 
-### How do i get a invite code
+### How do I get an invite code?
 
--   You can ask tricked for a invite
+-   Ask tricked for a invite
 -   Get a invite from a friend :D
 -   Discord https://discord.gg/KkMKCchJb8
 
-### Whats your infrastructure
+### What's your infrastructure?
 
--   The images are stored in supabase storage and your accounts are stored in supabase postgressql
--   This site is hosted by vercel.
--   The backend is hosted by heroku or onrender
--   This website is made using nextjs
--   The backend is made using fastify, the bot is made using fastify too and is hosted on the same project
--   If you have any idea how to improve on this in a "free" way feel free to dm me
+-   The images are stored in Supabase storage and your accounts are stored in Supabase PostgreSQL
+-   This site is hosted on Vercel.
+-   The backend is hosted by Heroku or Render
+-   This website is made using Next.js
+-   The backend is made using Fastify and bot is made using fastify too and is hosted on the same project
+-   If you have any idea how to improve on this in a "free" way feel free to DM me
