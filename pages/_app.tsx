@@ -1,25 +1,24 @@
 import "../styles/globals.css";
 import type { AppProps } from "next/app";
 import React from "react";
-import { createTheme, ThemeProvider } from "@material-ui/core/styles";
-import useMediaQuery from "@material-ui/core/useMediaQuery";
+import { ChakraProvider } from "@chakra-ui/react";
+
+import { extendTheme, ThemeConfig } from "@chakra-ui/react";
+
+// 2. Add your color mode config
+const config: ThemeConfig = {
+	initialColorMode: "dark",
+	useSystemColorMode: false,
+};
+
+// 3. extend the theme
+const theme = extendTheme({ config });
 
 function MyApp({ Component, pageProps }: AppProps) {
-	const prefersDarkMode = useMediaQuery("(prefers-color-scheme: dark)");
-	const theme = React.useMemo(
-		() =>
-			createTheme({
-				palette: {
-					type: prefersDarkMode ? "dark" : "light",
-				},
-			}),
-		[prefersDarkMode]
-	);
-
 	return (
-		<ThemeProvider theme={theme}>
+		<ChakraProvider theme={theme}>
 			<Component {...pageProps} />
-		</ThemeProvider>
+		</ChakraProvider>
 	);
 }
 export default MyApp;

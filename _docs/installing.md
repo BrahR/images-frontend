@@ -25,7 +25,7 @@ description: Guide on how to install Sogga Images
 
 ### MacOs
 
-    -   Switch to linux it's better
+-   Switch to linux it's better
 
 ```
 

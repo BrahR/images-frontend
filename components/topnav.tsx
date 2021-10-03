@@ -6,59 +6,41 @@ import Tab from "@material-ui/core/Tab";
 import Typography from "@material-ui/core/Typography";
 import Box from "@material-ui/core/Box";
 import Link from "next/link";
+import { Link as ChakraLink, Button, Text } from "@chakra-ui/react";
 interface TabPanelProps {
 	children?: React.ReactNode;
 	index: any;
 	value: any;
 }
 
-function TabPanel(props: TabPanelProps) {
-	const { children, value, index, ...other } = props;
-
-	return (
-		<div role="tabpanel" hidden={value !== index} id={`nav-tabpanel-${index}`} aria-labelledby={`nav-tab-${index}`} {...other}>
-			{value === index && (
-				<Box p={3}>
-					<Typography>{children}</Typography>
-				</Box>
-			)}
-		</div>
-	);
-}
-
-function a11yProps(index: any) {
-	return {
-		id: `nav-tab-${index}`,
-		"aria-controls": `nav-tabpanel-${index}`,
-	};
-}
-
 interface LinkTabProps {
 	label?: string;
-	href?: string;
+	href: string;
 }
 
 function LinkTab(props: LinkTabProps) {
 	return (
-		<Tab
-			component={"a"}
-			// onClick={(event: React.MouseEvent<HTMLAnchorElement, MouseEvent>) => {
-			// 	// event.preventDefault();
-			// }}
-			{...props}
-		/>
+		<Link href={props.href}>
+			<ChakraLink>
+				<Button minW="5rem" height="3rem" colorScheme="blue" borderRadius="0">
+					<Box>
+						<Text>{props.label}</Text>
+					</Box>
+				</Button>
+			</ChakraLink>
+		</Link>
 	);
 }
 
-export default function NavTabs({ active = 0, position, className }: any) {
+export default function NavTabs() {
 	return (
-		<AppBar position={position || "static"} className={className}>
-			<Tabs variant="fullWidth" value={active} aria-label="nav tabs example">
+		<Box>
+			<ul>
 				<LinkTab label="Main Page" href={"/"} />
 				<LinkTab label="Docs" href={"/docs"} />
 				<LinkTab label="Rules" href={"/docs/rules"} />
 				<LinkTab label="privacy" href={"/docs/privacy"} />
-			</Tabs>
-		</AppBar>
+			</ul>
+		</Box>
 	);
 }

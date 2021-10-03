@@ -1,6 +1,7 @@
 import matter from "gray-matter";
-import marked from "marked";
+import { serialize } from "next-mdx-remote/serialize";
 import fs from "fs";
+
 import path from "path";
 function readdirRecursive(directory: string) {
 	const result = [];
@@ -39,11 +40,11 @@ export async function getDocBySlug(slug: any) {
 	const fileContent = await fs.readFileSync(`${process.cwd()}/_docs/${slug}.md`, { encoding: "ascii" });
 	const meta = matter(fileContent);
 
-	const content = marked(meta.content);
+	const mdxSource = await serialize(meta.content, {});
 
 	return {
 		...meta.data,
 		title: meta.data.title,
-		content: content,
+		content: mdxSource,
 	};
 }

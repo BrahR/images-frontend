@@ -1,36 +1,7 @@
 import React from "react";
 import Head from "next/head";
-import styles from "../styles/Home.module.css";
-import { makeStyles, Theme } from "@material-ui/core/styles";
-import Typography from "@material-ui/core/Typography";
-import Card from "@material-ui/core/Card";
-import CardActionArea from "@material-ui/core/CardActionArea";
-import CardContent from "@material-ui/core/CardContent";
-import Paper from "@material-ui/core/Paper";
 import TopNav from "../components/topnav";
-
-const useStyles = makeStyles((theme: Theme) => ({
-	root: {
-		flexGrow: 1,
-		backgroundColor: theme.palette.background.paper,
-	},
-	image: {
-		width: "100%",
-		height: "8rem",
-	},
-	media: {
-		height: 0,
-		paddingTop: "56.25%", // 16:9
-	},
-	rooters: {
-		maxWidth: 400,
-	},
-	padded: {
-		padding: "1rem 1rem 1rem 1rem",
-	},
-}));
-
-//Code stalker note feel free to suggest new features
+import { Box, Text, Image, SimpleGrid, GridItem, Modal, ModalOverlay, ModalContent, ModalHeader, ModalCloseButton, ModalBody, ModalFooter, Button, useDisclosure } from "@chakra-ui/react";
 const features = [
 	{
 		title: "Easily change your settings",
@@ -49,26 +20,63 @@ const features = [
 	},
 ];
 export default function Home() {
-	const classes = useStyles();
-
 	function makeCard(name: string, content: string, img: string) {
-		return (
-			<Card className={styles.Cards}>
-				<CardContent>
-					<img src={img} title={name} className={classes.image} />
-				</CardContent>
+		const { isOpen, onOpen, onClose } = useDisclosure();
 
-				<CardActionArea>
-					<CardContent>
-						<Typography gutterBottom variant="h5" component="h2">
-							{name}
-						</Typography>
-						<Typography variant="body2" color="textSecondary" component="p">
+		return (
+			<>
+				<Modal size="6xl" isOpen={isOpen} onClose={onClose}>
+					<ModalOverlay />
+					<ModalContent>
+						<ModalHeader>{name}</ModalHeader>
+						<ModalCloseButton />
+						<ModalBody>
 							{content}
-						</Typography>
-					</CardContent>
-				</CardActionArea>
-			</Card>
+							<Image src={img} title={name} height="auto" width="100%" objectFit="cover" />
+						</ModalBody>
+
+						<ModalFooter>
+							<Button colorScheme="blue" mr={3} onClick={onClose}>
+								Close
+							</Button>
+							{/* <Button variant="ghost">Secondary Action</Button> */}
+						</ModalFooter>
+					</ModalContent>
+				</Modal>
+				<GridItem
+					cursor="pointer"
+					// as={motion.div}
+					// whileHover={{
+					// 	scale: 1.1,
+					// }}
+					// transition={{ duration: 0.4 }}
+					maxW="35rem"
+					minH="22rem"
+					bg="current"
+					border="md"
+					rounded="md"
+					borderColor="current"
+					padding="10px"
+					onClick={onOpen}
+				>
+					<Box width="100%" height="100%">
+						<Box>
+							<Image src={img} title={name} height="10rem" width="100%" objectFit="cover" />
+						</Box>
+
+						<Box>
+							<Box color="CaptionText">
+								<Text variant="h5" fontSize="lg">
+									{name}
+								</Text>
+								<Text variant="body2" color="textSecondary">
+									{content}
+								</Text>
+							</Box>
+						</Box>
+					</Box>
+				</GridItem>
+			</>
 		);
 	}
 
@@ -76,25 +84,25 @@ export default function Home() {
 		<>
 			<TopNav />
 
-			<Paper>
+			<Box>
 				<header>
 					<div>
-						<h1 className={styles.HomeTitle}>
+						<Text as="h1" fontSize="5xl">
 							Welcome to&nbsp;<a href="https://discord.gg/KkMKCchJb8">Sogga Images!</a>
-						</h1>
+						</Text>
 					</div>
-					<div className={styles.HomeDescription}>
-						<p>
-							Get started by joining <a href="ttps://discord.gg/mY8zTARu4g">the Discord server</a> and pinging tricked to get access
-						</p>
+					<div>
+						<Text as="h1" fontSize="2xl">
+							Get started by joining <a href="https://discord.gg/mY8zTARu4g">the Discord server</a> and pinging tricked to get access
+						</Text>
 					</div>
 				</header>
-				<div className={styles.Container}>
-					<div className={styles.CardHolder}>
-						<div className={styles.HomeCards}>{features.map((x) => makeCard(x.title, x.description, x.image))}</div>
-					</div>
-				</div>
-			</Paper>
+				<Box>
+					<SimpleGrid alignContent="center" alignItems="center" justifyItems="center" paddingTop="4rem" paddingBottom="6rem" gridGap="3rem" minChildWidth="15rem">
+						{features.map((x) => makeCard(x.title, x.description, x.image))}
+					</SimpleGrid>
+				</Box>
+			</Box>
 
 			<Head>
 				<title>Sogga Image Uploader</title>
