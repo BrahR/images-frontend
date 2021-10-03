@@ -1,24 +1,10 @@
 import { useEffect } from "react";
 import { getDocBySlug, getDocs } from "../../api/index";
-import Paper from "@material-ui/core/Paper";
+import { useRouter } from "next/router";
 import Head from "next/head";
-import { makeStyles, Theme, createStyles } from "@material-ui/core/styles";
 import TopNav from "../../components/topnav";
-import Drawer from "@material-ui/core/Drawer";
-import AppBar from "@material-ui/core/AppBar";
-import CssBaseline from "@material-ui/core/CssBaseline";
-import Toolbar from "@material-ui/core/Toolbar";
-import List from "@material-ui/core/List";
-import Typography from "@material-ui/core/Typography";
-import Divider from "@material-ui/core/Divider";
-// import ListItem from "@material-ui/core/ListItem";
-import ListItemIcon from "@material-ui/core/ListItemIcon";
-import ListItemText from "@material-ui/core/ListItemText";
-// import Link from "next/link";
-const drawerWidth = 240;
-import { Link as ChakraLink, Button, Text, Flex, Box, SimpleGrid } from "@chakra-ui/react";
+import { Button, Text, Flex, Box, SimpleGrid, Link, ListItem, UnorderedList } from "@chakra-ui/react";
 import { MDXRemote } from "next-mdx-remote";
-import { Link, ListItem, UnorderedList } from "@chakra-ui/react";
 
 const components = {
 	ul: UnorderedList,
@@ -74,10 +60,9 @@ const Markdown = ({ content }: any) => {
 	);
 };
 
-function Cursed({ input }: any) {
-	return <div dangerouslySetInnerHTML={{ __html: input }} />;
-}
 export default function Doc({ doc, docs }: any) {
+	const router = useRouter();
+
 	return (
 		<div>
 			<Head>
@@ -85,12 +70,18 @@ export default function Doc({ doc, docs }: any) {
 				<meta name="description" content={doc.description} />
 			</Head>
 			<TopNav />
+
 			<Flex padding="10px" shrink={0} overflowX="scroll" width="100vw">
 				<Box width="10rem">
 					<SimpleGrid>
 						{docs.map((text: any, y: any) => (
 							<Link href={`${text.slug}`} key={y} paddingBottom="10px">
-								<Button overflowWrap={"break-word"} width="10rem">
+								<Button
+									overflowWrap={"break-word"}
+									width="10rem"
+									borderRight="4px"
+									borderRightColor={text.slug == (router.query.doc as unknown as string[])?.join("/") ? "blue.800" : "darkred"}
+								>
 									<Text overflowWrap={"break-word"}>{text.title || text.slug}</Text>
 								</Button>
 							</Link>

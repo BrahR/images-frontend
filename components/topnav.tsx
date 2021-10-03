@@ -41,12 +41,10 @@ export default function NavTabs() {
 
 	return (
 		<Box>
-			<ul>
-				<LinkTab label="Main Page" href={"/"} pathName={path} />
-				<LinkTab label="Docs" href={"/docs"} pathName={path} />
-				<LinkTab label="Rules" href={"/docs/rules"} pathName={path} />
-				<LinkTab label="Privacy" href={"/docs/privacy"} pathName={path} />
-			</ul>
+			<LinkTab label="Main Page" href={"/"} pathName={path} />
+			<LinkTab label="Docs" href={"/docs"} pathName={path} />
+			<LinkTab label="Rules" href={"/docs/rules"} pathName={path} />
+			<LinkTab label="Privacy" href={"/docs/privacy"} pathName={path} />
 		</Box>
 	);
 }
