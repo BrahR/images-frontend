@@ -52,20 +52,20 @@ export default function Home() {
 					// transition={{ duration: 0.4 }}
 					maxW="35rem"
 					minH="22rem"
-					bg="current"
+					bg="gray.700"
 					border="md"
 					rounded="md"
-					borderColor="current"
+					borderColor="gray.700"
 					padding="10px"
 					onClick={onOpen}
 				>
 					<Box width="100%" height="100%">
-						<Box>
+						<Box paddingBottom="10px">
 							<Image src={img} title={name} height="10rem" width="100%" objectFit="cover" />
 						</Box>
 
 						<Box>
-							<Box color="CaptionText">
+							<Box>
 								<Text variant="h5" fontSize="lg">
 									{name}
 								</Text>
