@@ -71,18 +71,13 @@ export default function Doc({ doc, docs }: any) {
 			</Head>
 			<TopNav />
 
-			<Flex padding="10px" shrink={0} overflowX="scroll" width="100vw">
-				<Box width="10rem">
+			<Flex padding="10px" shrink={0} overflowX="scroll" width="100vw" spacing="1rem">
+				<Box width="10rem" marginRight="1rem">
 					<SimpleGrid>
 						{docs.map((text: any, y: any) => (
 							<Link href={`${text.slug}`} key={y} paddingBottom="10px">
-								<Button
-									overflowWrap={"break-word"}
-									width="10rem"
-									borderRight="4px"
-									borderRightColor={text.slug == (router.query.doc as unknown as string[])?.join("/") ? "blue.800" : "darkred"}
-								>
-									<Text overflowWrap={"break-word"}>{text.title || text.slug}</Text>
+								<Button width="10rem" borderRight="4px" borderRightColor={text.slug == (router.query.doc as unknown as string[])?.join("/") ? "blue.800" : "darkred"}>
+									<Text>{text.title || text.slug}</Text>
 								</Button>
 							</Link>
 						))}
@@ -90,7 +85,7 @@ export default function Doc({ doc, docs }: any) {
 				</Box>
 
 				<main>
-					<Text paddingLeft="1rem" overflowWrap={"break-word"} fontSize="larger">
+					<Text overflowWrap={"break-word"} fontSize="larger">
 						<Markdown content={doc.content} />
 					</Text>
 				</main>
