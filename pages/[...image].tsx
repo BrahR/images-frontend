@@ -29,9 +29,7 @@ const ImagePage = ({ imageUrl, found, data }: any) => {
 				{!found ? (
 					<Box bgGradient="linear(to-r, green.200, pink.500)" height="100vh" fontWeight="bold">
 						<SimpleGrid justifyItems="center">
-							<Text fontSize="3xl">
-								Captured by {`${data.user.name}`} amount of {`${data.user.name}`} images: {`${data.user.uploads}`}
-							</Text>
+							<Text fontSize="3xl">Captured by {`${data?.user_name}`}</Text>
 						</SimpleGrid>
 						<SimpleGrid justifyItems="center">
 							<Image maxW="80rem" maxH="80rem" height="auto" width="auto" src={imageUrl} alt="" onClick={() => window.open(imageUrl)} />
@@ -45,8 +43,8 @@ const ImagePage = ({ imageUrl, found, data }: any) => {
 	);
 };
 ImagePage.getInitialProps = async ({ res, req, query: { image } }: any) => {
-	const imageUrl = `${process.env.BACKENDURL || "https://api.tricked.pro/images"}/view/${image[image.length - 1]}`;
-	const e = await fetch(imageUrl + "/stats");
+	const imageUrl = `${process.env.BACKENDURL || "https://api.tricked.pro/images"}/raw/${image[image.length - 1]}`;
+	const e = await fetch(`${process.env.BACKENDURL || "https://api.tricked.pro/images"}/stats/${image[image.length - 1]}`);
 	let data = await e.json();
 	if (data?.redirect) {
 		res.writeHead(308, { Location: data.redirect });
