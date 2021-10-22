@@ -15,19 +15,19 @@
 		{
 			title: 'What are you waiting for?',
 			description:
-				"Start now by joining the Discord, asking for a code and redeeming it! It's that simple.",
+				"Start now by joining the Discord, asking for a code, and redeeming it! It's that simple.",
 			image: '/redeem.png'
 		}
 	];
 	import '../index.css';
 	let desc =
-		'Soggaimages is the fatest image uploader out there its built with the newest and fastest technologies';
-	let title = 'Sogga images - a fast image uploader';
+		'Sogga Images is an extremely fast image uploader built with the newest technologies.';
+	let title = 'Sogga Images - The fastest image uploader';
 </script>
 
 <svelte:head>
 	<title>Sogga Image Uploader</title>
-	<meta name="title" content="Sogga images - a fast image uploader" />
+	<meta name="title" content="Sogga Images - The fastest image uploader" />
 	<meta name="description" content={desc} />
 	<meta property="og:title" content={title} />
 	<meta property="og:description" content={desc} />
@@ -43,9 +43,9 @@
 <div>
 	<div class="m-auto">
 		<div class="text-center">
-			<p class="text-3xl text-white">Welcome to sogga images</p>
+			<p class="text-3xl text-white">Welcome to Sogga Images - The fastest image uploader</p>
 			<p class="text-xl font-bold text-white">
-				Looking to score a invite? join the <a
+				Looking to score an invite? Join the <a
 					class="text-red-600"
 					href="https://discord.gg/mY8zTARu4g">Discord</a
 				>
