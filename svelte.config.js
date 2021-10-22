@@ -15,9 +15,9 @@ const config = {
 		}),
 		mdsvex(mdsvexConfig)
 	],
-	adapter: vercel(),
 	kit: {
 		// hydrate the <div id="svelte"> element in src/app.html
+		adapter: vercel(),
 		target: '#main',
 		prerender: {
 			crawl: true,
