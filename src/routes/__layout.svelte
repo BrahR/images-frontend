@@ -1,5 +1,6 @@
 <script lang="ts">
 	import '../app.css';
+
 	const links = [
 		{
 			href: '/',
@@ -19,6 +20,10 @@
 		}
 	];
 </script>
+
+<svelte:head>
+	<link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet" />
+</svelte:head>
 
 <template>
 	<div class="topnav  p-d gap-2 break-words">

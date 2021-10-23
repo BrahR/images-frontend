@@ -36,8 +36,6 @@
 	<meta property="twitter:description" content={desc} />
 
 	<meta property="theme-color" content="#1b8aeb" />
-
-	<link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet" />
 </svelte:head>
 
 <div>

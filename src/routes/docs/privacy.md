@@ -5,8 +5,8 @@ description: Privacy policy of Sogga Images
 
 ### What data do we save?
 
-- All images uploaded are saved on Supabase.
-- Your account is stored on Supabase.
+- All images uploaded are saved on a namecheap vps.
+- Your account is stored on a namecheap vps.
 - No other information is collected.
 
 ### How can I request data deletion?
