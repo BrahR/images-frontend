@@ -52,7 +52,7 @@
 		<meta name="title" content={embed.title} />
 		<meta property="og:title" content={embed.title} />
 		<meta property="twitter:title" content={embed.title} />
-		/>{/if}
+	{/if}
 	{#if embed.description}
 		<meta name="description" content={embed.description} />
 		<meta property="og:description" content={embed.description} />

@@ -31,8 +31,6 @@
 			<a class="p-3 border-b-4 border-green-500" href={link.href}>{link.a}</a>
 		{/each}
 	</div>
-	<!-- svelte:head
-		title {pageTitle($page.path)} · Frackit -->
 
 	<slot />
 </template>
