@@ -15,6 +15,7 @@ const config = {
 		}),
 		mdsvex(mdsvexConfig)
 	],
+
 	kit: {
 		// hydrate the <div id="svelte"> element in src/app.html
 		adapter: vercel(),
@@ -24,6 +25,11 @@ const config = {
 			enabled: true,
 			onError: 'continue',
 			entries: ['*']
+		},
+		vite: {
+			optimizeDeps: {
+				include: ['highlight.js/lib/core']
+			}
 		}
 	}
 };

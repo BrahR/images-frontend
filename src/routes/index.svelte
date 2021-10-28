@@ -20,14 +20,13 @@
 		}
 	];
 	import '../index.css';
-	let desc =
-		'Sogga Images is an extremely fast image uploader built with the newest technologies.';
+	let desc = 'Sogga Images is an extremely fast image uploader built with the newest technologies.';
 	let title = 'Sogga Images - The fastest image uploader';
 </script>
 
 <svelte:head>
 	<title>Sogga Image Uploader</title>
-	<meta name="title" content="Sogga Images - The fastest image uploader" />
+	<meta name="title" content={title} />
 	<meta name="description" content={desc} />
 	<meta property="og:title" content={title} />
 	<meta property="og:description" content={desc} />

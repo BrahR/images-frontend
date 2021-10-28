@@ -14,17 +14,10 @@
 		let params = image?.split('/');
 
 		if (params && params[params?.length - 1].split('.')?.[1]) {
-			return {
-				status: 404,
-				error: new Error('Not found')
-			};
+			return;
 		}
 		let data = await getImage(params[params?.length - 1]);
-		if (data.success === false)
-			return {
-				status: 404,
-				error: new Error('Not found')
-			};
+		if (data.success === false) return;
 		if (data.redirect && data.content_type === 'redirect') {
 			return {
 				status: 302,

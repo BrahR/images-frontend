@@ -17,6 +17,10 @@
 		{
 			href: '/docs/privacy',
 			a: 'privacy'
+		},
+		{
+			href: '/paste',
+			a: 'paste'
 		}
 	];
 </script>
