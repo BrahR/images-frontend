@@ -28,7 +28,7 @@ const config = {
 		},
 		vite: {
 			optimizeDeps: {
-				include: ['highlight.js/lib/core']
+				include: ['highlight.js/lib/core', '@novacbn/svelte-codejar']
 			}
 		}
 	}

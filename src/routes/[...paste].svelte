@@ -21,7 +21,6 @@
 		// 	};
 		// }
 		let [name, language] = params[params?.length - 1].split('.');
-		console.log(language);
 		let data = await getPaste(name);
 		if (data?.success === false || !data?.content) return;
 
