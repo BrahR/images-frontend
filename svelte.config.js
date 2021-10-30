@@ -1,6 +1,4 @@
 import preprocess from 'svelte-preprocess';
-import tailwind from 'tailwindcss';
-import autoprefixer from 'autoprefixer';
 import mdsvexConfig from './mdsvex.config.js';
 import { mdsvex } from 'mdsvex';
 import vercel from '@sveltejs/adapter-vercel';
@@ -17,7 +15,6 @@ const config = {
 	],
 
 	kit: {
-		// hydrate the <div id="svelte"> element in src/app.html
 		adapter: vercel(),
 		target: '#main',
 		prerender: {
