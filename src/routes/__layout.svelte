@@ -1,6 +1,6 @@
 <script lang="ts">
 	import '../app.css';
-
+	import '../roboto.css';
 	const links = [
 		{
 			href: '/',
@@ -24,10 +24,6 @@
 		}
 	];
 </script>
-
-<svelte:head>
-	<link href="/roboto.css" rel="stylesheet" />
-</svelte:head>
 
 <template>
 	<div class="topnav  p-d gap-2 break-words">
