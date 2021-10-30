@@ -1,22 +1,8 @@
 <script context="module">
 	export const ssr = false;
-	import hljs from 'highlight.js/lib/core';
-	import javascript from 'highlight.js/lib/languages/javascript';
-
-	hljs.registerLanguage('javascript', javascript);
-
-	// `highlight` takes the input code and returns the highlighted HTML markup
-	const highlight = (code, syntax) =>
-		hljs.highlight(code, {
-			language: syntax
-		}).value;
-	// import Prism from 'prismjs';
-	// import { CodeJar } from '@novacbn/svelte-codejar';
-	// const highlight = (code, syntax) => Prism.highlight(code, Prism.languages[syntax], syntax);
 </script>
 
 <script lang="ts">
-	import Prism from 'prismjs';
 	let CodeJar;
 	onMount(async () => {
 		({ CodeJar } = await import('@novacbn/svelte-codejar'));
@@ -45,7 +31,22 @@
 			window.location.pathname = `/${json.code}`;
 		}
 	}
+	let desc =
+		'Sogga paste is a fast and beautiful site to share your text, pastes are stored for 30 days';
+	let title = 'Sogga paste a fast and effecient paste server';
 </script>
+
+<svelte:head>
+	<title>{title}</title>
+	<meta name="title" content={title} />
+	<meta name="description" content={desc} />
+	<meta property="og:title" content={title} />
+	<meta property="og:description" content={desc} />
+	<meta property="og:type" content="website" />
+	<meta property="twitter:title" content={title} />
+	<meta property="twitter:description" content={desc} />
+	<meta property="theme-color" content="#1b8aeb" />
+</svelte:head>
 
 <div id="jar">
 	{#if CodeJar}
