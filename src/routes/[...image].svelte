@@ -35,8 +35,20 @@
 	export let user_name;
 	export let embed: Record<string, string> = {};
 	export let url;
-	import '../image.css';
-	import '../app.css';
+	// export let id;
+	// export let user_id;
+	// import '../image.css';
+	// import '../app.css';
+	// import { user } from '../lib/store';
+	// import { onMount } from 'svelte';
+	// let creds;
+	// onMount(() => {
+	// 	let data: any = user.get();
+
+	// 	if (data.key) {
+	// 		creds = data;
+	// 	}
+	// });
 </script>
 
 <svelte:head>
