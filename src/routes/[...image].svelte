@@ -3,7 +3,7 @@
 
 	export const ssr = true;
 	export const prerender = true;
-	export const hydrate = false;
+	export const hydrate = true;
 	export const router = false;
 	// export const prerender = true;
 	/**

@@ -70,7 +70,7 @@
 	onMount(() => {
 		show = false;
 		const handleOutsideClick = (event) => {
-			if (show && !menu.contains(event.target)) {
+			if (menu && show && !menu.contains(event.target)) {
 				show = false;
 			}
 		};
@@ -100,6 +100,7 @@
 		{/each}
 
 		<!-- svelte-ignore a11y-missing-attribute -->
+
 		<a
 			class={`p-3 cursor-pointer hover:bg-green-700 ${show ? 'bg-green-800' : ''}`}
 			on:click={() => (show = !show)}
