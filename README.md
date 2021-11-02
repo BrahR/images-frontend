@@ -1,5 +1,7 @@
 # Svelte frontend
 
+Discord: https://discord.gg/mY8zTARu4g
+
 This is the frontend for the soggaimages uploader [https://soggaimages.xyz](https://soggaimages.xyz)
 
 Its made using svelte making probably one of the fastest frontend's for a image uploader
