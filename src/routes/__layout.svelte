@@ -1,27 +1,38 @@
 <script lang="ts">
 	import '../app.css';
 	import '../roboto.css';
-	const links = [
+	const topLinks = [
 		{
 			href: '/',
 			a: 'home'
 		},
-		{
-			href: '/docs/faq',
-			a: 'faq'
-		},
-		{
-			href: '/docs/rules',
-			a: 'rules'
-		},
-		{
-			href: '/docs/privacy',
-			a: 'privacy'
-		},
+
 		{
 			href: '/paste',
 			a: 'paste'
 		}
+	];
+	const bottomLinks = [
+		[
+			{
+				href: '/docs/faq',
+				a: 'Faq'
+			},
+			{
+				href: '/docs/rules',
+				a: 'Rules'
+			},
+			{
+				href: '/docs/privacy',
+				a: 'Privacy'
+			}
+		],
+		[
+			{
+				href: 'https://github.com/Tricked-dev/uploader',
+				a: 'Github'
+			}
+		]
 	];
 	const otherLinks = [
 		{
@@ -51,7 +62,7 @@
 	];
 
 	import { onMount } from 'svelte';
-	import { scale } from 'svelte/transition';
+	import { fly } from 'svelte/transition';
 
 	let show = false; // menu state
 	let menu = null; // menu wrapper DOM reference
@@ -83,35 +94,51 @@
 </script>
 
 <template bind:this={menu}>
-	<div class="topnav  p-d gap-2 break-words">
-		{#each links as link}
-			<a
-				class="p-3 border-b-4 border-green-500 hover:border-red-400 hover:bg-green-500"
-				href={link.href}>{link.a}</a
-			>
+	<div class="topnav p-d gap-2 break-words bg-gray-700 ">
+		{#each topLinks as link}
+			<a class="p-3 hover:bg-green-700" href={link.href}>{link.a}</a>
 		{/each}
+
 		<!-- svelte-ignore a11y-missing-attribute -->
-		<a class="p-3 border-b-4 border-green-500 hover:border-red-400 hover:bg-green-500">
-			<button on:click={() => (show = !show)}> Documentation </button>
+		<a
+			class={`p-3 cursor-pointer hover:bg-green-700 ${show ? 'bg-green-800' : ''}`}
+			on:click={() => (show = !show)}
+		>
+			Documentation
 		</a>
-	</div>
-	<div class="relative">
-		<div>
-			{#if show}
-				<div
-					in:scale={{ duration: 100, start: 0.95 }}
-					out:scale={{ duration: 75, start: 0.95 }}
-					class=" right-0 w-48 py-2 mt-1 bg-gray-900
-          rounded shadow-md"
+
+		{#if show}
+			{#each otherLinks as link}
+				<a
+					transition:fly={{ x: 1500, y: 0, duration: 800 }}
+					href={link.href}
+					class="p-3 hover:bg-green-700">{link.a}</a
 				>
-					{#each otherLinks as link}
-						<a href={link.href} class="block px-4 py-2 hover:bg-green-500 hover:text-green-100"
-							>{link.a}</a
-						>
-					{/each}
+			{/each}
+		{/if}
+	</div>
+
+	<div class="pb-4" />
+	<slot />
+
+	<div class="pb-7" />
+	<div
+		class="transform no-underline text-gray-500 hover:text-white min-h-full border-t-2 border-gray-600 hover:border-white pt-6"
+	>
+		<div class="flex-auto flex list-none">
+			{#each bottomLinks as links}
+				<div>
+					<u>
+						{#each links as link}
+							<li>
+								<a href={link.href} class="px-4 py-2 not-sr-only hover:text-blue-500 translate-x-"
+									>{link.a}</a
+								>
+							</li>
+						{/each}
+					</u>
 				</div>
-			{/if}
+			{/each}
 		</div>
 	</div>
-	<slot />
 </template>

@@ -35,20 +35,8 @@
 	export let user_name;
 	export let embed: Record<string, string> = {};
 	export let url;
-	// export let id;
-	// export let user_id;
-	// import '../image.css';
-	// import '../app.css';
-	// import { user } from '../lib/store';
-	// import { onMount } from 'svelte';
-	// let creds;
-	// onMount(() => {
-	// 	let data: any = user.get();
-
-	// 	if (data.key) {
-	// 		creds = data;
-	// 	}
-	// });
+	import '../image.css';
+	import '../app.css';
 </script>
 
 <svelte:head>
@@ -72,10 +60,12 @@
 
 <div class="main">
 	<p class="text text-white">captured by {user_name}</p>
-	<img
-		style={`border: 9px solid ${embed.color || '#00a41b'}`}
-		class="image"
-		alt=""
-		src={`https://api.tricked.pro/images/raw/${url}`}
-	/>
+	<a href={`https://api.tricked.pro/images/raw/${url}`}>
+		<img
+			style={`border: 9px solid ${embed.color || '#00a41b'}`}
+			class="image"
+			alt=""
+			src={`https://api.tricked.pro/images/raw/${url}`}
+		/>
+	</a>
 </div>
