@@ -1,20 +1,8 @@
-# create-svelte
+# Svelte frontend
 
-Everything you need to build a Svelte project, powered by [`create-svelte`](https://github.com/sveltejs/kit/tree/master/packages/create-svelte);
+This is the frontend for the soggaimages uploader [https://soggaimages.xyz](https://soggaimages.xyz)
 
-## Creating a project
-
-If you're seeing this, you've probably already done this step. Congrats!
-
-```bash
-# create a new project in the current directory
-npm init svelte@next
-
-# create a new project in my-app
-npm init svelte@next my-app
-```
-
-> Note: the `@next` is temporary
+Its made using svelte making probably one of the fastest frontend's for a image uploader
 
 ## Developing
 
@@ -36,3 +24,9 @@ npm run build
 ```
 
 > You can preview the built app with `npm run preview`, regardless of whether you installed an adapter. This should _not_ be used to serve your app in production.
+
+### Donating
+
+<img src="https://cryptologos.cc/logos/monero-xmr-logo.png?v=014" alt="" height="15px">`89prBkdG58KU15jv5LTbP3MgdJ2ikrcyu1vmdTKTGEVdhKRvbxgRN671jfFn3Uivk4Er1JXsc1xFZFbmFCGzVZNLPQeEwZc`
+
+<img src="https://cryptologos.cc/logos/ethereum-eth-logo.png?v=014" alt="" height="15px">`0xc31a1A5dCd1a4704e81fB7c9C3fa858b9A00C7fb`
