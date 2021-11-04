@@ -1,11 +1,11 @@
 ---
 title: Rules
-description: Sogga Images rules
+description: Ascella Uploader rules
 ---
 
 ### Rules
 
-Sogga Images has the following rules:
+Ascella Uploader has the following rules:
 
 - Uploading rules
   - No form of pornography is allowed.

@@ -1,6 +1,6 @@
 ---
 title: API
-description: Sogga Images API documentation
+description: Ascella Images API documentation
 ---
 
 ### baseurl = https://api.tricked.pro/images

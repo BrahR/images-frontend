@@ -49,12 +49,13 @@
 	export let data: any[];
 
 	import '../app.css';
-	let desc = 'Sogga Images is an extremely fast image uploader built with the newest technologies.';
-	let title = 'Domains - Sogga Images - The fastest image uploader';
+	let desc =
+		'Ascella Images is an extremely fast image uploader built with the newest technologies.';
+	let title = 'Domains - Ascella Uploader - The fastest image uploader';
 </script>
 
 <svelte:head>
-	<title>Domains - Sogga Image Uploader</title>
+	<title>Domains - Ascella Image Uploader</title>
 	<meta name="title" content={title} />
 	<meta name="description" content={desc} />
 	<meta property="og:title" content={title} />
@@ -68,7 +69,7 @@
 
 <div>
 	<div class="w-[30rem] m-auto">
-		<p class="text text-white text-center pb-7">Sogga Images domains</p>
+		<p class="text text-white text-center pb-7">Ascella domains</p>
 		{#each data as domain}
 			<div>
 				{#if domain.apex}

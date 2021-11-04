@@ -1,6 +1,6 @@
 ---
 title: Installing
-description: Guide on how to install Sogga Images
+description: Guide on how to install Ascella Images
 ---
 
 ### How can I use this image uploader?
@@ -17,7 +17,7 @@ description: Guide on how to install Sogga Images
 
 - Download Sharenix [github.com/Francesco149/sharenix](https://github.com/Francesco149/sharenix)
 
-- Update the default imgur.com uploader to use Sogga Images
+- Update the default imgur.com uploader to use Ascella Uploader
 - Change the request URL to the one in /profile
 - Change the "URL" to "URL": "$json:url$"
 - Adjust the keybinds as needed in the app

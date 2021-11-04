@@ -20,12 +20,13 @@
 		}
 	];
 	import '../index.css';
-	let desc = 'Sogga Images is an extremely fast image uploader built with the newest technologies.';
-	let title = 'Sogga Images - The fastest image uploader';
+	let desc =
+		'Ascella Uploader is an extremely fast image uploader built with the newest technologies.';
+	let title = 'Ascella Uploader - The fastest image uploader';
 </script>
 
 <svelte:head>
-	<title>Sogga Image Uploader</title>
+	<title>Ascella Image Uploader</title>
 	<meta name="title" content={title} />
 	<meta name="description" content={desc} />
 	<meta property="og:title" content={title} />
@@ -40,7 +41,7 @@
 <div>
 	<div class="m-auto">
 		<div class="text-center">
-			<p class="text-3xl text-white">Welcome to Sogga Images</p>
+			<p class="text-3xl text-white">Welcome to the Ascella uploader</p>
 			<p class="text-xl font-bold text-white">
 				Looking to score an invite? Join the <a
 					class="text-red-600"
@@ -48,7 +49,9 @@
 				>
 			</p>
 		</div>
-		<div class="grid justify-center content-center items-center pt-3 sogga-grid m-auto width-full">
+		<div
+			class="grid justify-center content-center items-center pt-3 ascella-grid m-auto width-full"
+		>
 			{#each features as feature}
 				<div class="bg-gray-700 rounded-md max-w-xl min-h-[22rem] border-md p-3">
 					<div class="pb-2">

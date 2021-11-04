@@ -32,8 +32,8 @@
 		}
 	}
 	let desc =
-		'Sogga paste is a fast and beautiful site to share your text, pastes are stored for 30 days';
-	let title = 'Sogga paste a fast and effecient paste server';
+		'Ascella paste is a fast and beautiful site to share your text, pastes are stored for 30 days';
+	let title = 'Ascella paste a fast and effecient paste server';
 </script>
 
 <svelte:head>

@@ -1,6 +1,6 @@
 ---
 title: FAQ
-description: Sogga Images FAQ
+description: Ascella Uploader FAQ
 ---
 
 ### How do I get an invite code?

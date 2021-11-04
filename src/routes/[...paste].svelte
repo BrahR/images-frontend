@@ -25,8 +25,8 @@
 <script lang="ts">
 	import Prism from 'svelte-prismjs';
 
-	let desc = 'Sogga paste a fast and effecient paste server';
-	let title = 'Sogga paste a fast and effecient paste server';
+	let desc = 'Ascella paste a fast and effecient paste server';
+	let title = 'Ascella paste a fast and effecient paste server';
 	export let code: string;
 	export let paste: string;
 	export let language: string;

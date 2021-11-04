@@ -2,7 +2,7 @@
 
 Discord: https://discord.gg/mY8zTARu4g
 
-This is the frontend for the soggaimages uploader [https://soggaimages.xyz](https://soggaimages.xyz)
+This is the frontend for the Ascella uploader [https://ascella.host](https://ascella.host)
 
 Its made using svelte making probably one of the fastest frontend's for a image uploader
 
@@ -18,8 +18,6 @@ npm run dev -- --open
 ```
 
 ## Building
-
-Before creating a production version of your app, install an [adapter](https://kit.svelte.dev/docs#adapters) for your target environment. Then:
 
 ```bash
 npm run build

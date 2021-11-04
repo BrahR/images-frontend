@@ -63,11 +63,15 @@
 
 	import { onMount } from 'svelte';
 	import { fly } from 'svelte/transition';
+	import { goto } from '$app/navigation';
 
 	let show = false; // menu state
 	let menu = null; // menu wrapper DOM reference
 
 	onMount(() => {
+		if (window.location.hostname !== 'ascella.host' && window.location.hostname !== 'localhost') {
+			goto(`https://www.ascella.host${window.location.pathname}`);
+		}
 		show = false;
 		const handleOutsideClick = (event) => {
 			if (menu && show && !menu.contains(event.target)) {

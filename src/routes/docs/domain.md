@@ -1,9 +1,9 @@
 ---
 title: Adding a domain
-description: This is a guide on how to get your domain added to Sogga Images
+description: This is a guide on how to get your domain added to Ascella Uploader
 ---
 
-### How to get your domain added to Sogga Images
+### How to get your domain added to Ascella Uploader
 
 ### Step 1
 

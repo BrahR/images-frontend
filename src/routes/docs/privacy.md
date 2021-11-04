@@ -1,6 +1,6 @@
 ---
 title: Privacy
-description: Privacy policy of Sogga Images
+description: Privacy policy of Ascella Images
 ---
 
 ### What data do we save?
