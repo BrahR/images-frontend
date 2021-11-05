@@ -1,5 +1,5 @@
 <script lang="ts">
-	const features = [
+	const features: any[] = [
 		{
 			title: 'Easily change your settings',
 			description:
@@ -12,6 +12,12 @@
 				'You can easily change your domain from inside Discord with a single slash command.',
 			image: '/domains.png'
 		},
+		{
+			title: 'Dashboard',
+			description: 'A simple dashboard to change your domain and other settings.',
+			image: '/dashboard.png'
+		},
+		{},
 		{
 			title: 'What are you waiting for?',
 			description:
@@ -50,22 +56,26 @@
 			</p>
 		</div>
 		<div
-			class="grid justify-center content-center items-center pt-3 ascella-grid m-auto width-full"
+			class="grid justify-center content-center items-center pt-3 ascella-grid m-auto width-full gap-4"
 		>
 			{#each features as feature}
-				<div class="bg-gray-700 rounded-md max-w-xl min-h-[22rem] border-md p-3">
-					<div class="pb-2">
-						<img alt="" src={feature.image} class="object-cover w-full h-40" />
-					</div>
-					<div class="text-white w-full h-full">
-						<div>
-							<p class="text-xl">{feature.title}</p>
+				{#if !feature.title}
+					<div class=" min-h-[22rem] border-md p-3" />
+				{:else}
+					<div class="bg-gray-700 min-h-[22rem] border-md p-3 max-w-full">
+						<div class="pb-2 max-w-full">
+							<img alt="" src={feature.image} class="max-w-full object-cover w-full h-40" />
 						</div>
-						<div>
-							<p>{feature.description}</p>
+						<div class="text-white w-full h-full max-w-full">
+							<div>
+								<p class="text-xl">{feature.title}</p>
+							</div>
+							<div>
+								<p>{feature.description}</p>
+							</div>
 						</div>
 					</div>
-				</div>
+				{/if}
 			{/each}
 		</div>
 	</div>
