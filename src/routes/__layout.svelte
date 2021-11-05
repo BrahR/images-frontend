@@ -4,12 +4,15 @@
 	const topLinks = [
 		{
 			href: '/',
-			a: 'home'
+			a: 'Home'
 		},
-
+		{
+			href: 'https://dash.ascella.host',
+			a: 'Dashboard'
+		},
 		{
 			href: '/paste',
-			a: 'paste'
+			a: 'Paste'
 		}
 	];
 	const bottomLinks = [
@@ -31,6 +34,12 @@
 			{
 				href: 'https://github.com/Tricked-dev/uploader',
 				a: 'Github'
+			}
+		],
+		[
+			{
+				href: 'https://dash.ascella.host',
+				a: 'Dashboard'
 			}
 		]
 	];
