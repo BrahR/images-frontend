@@ -16,17 +16,12 @@ description: Guide on how to install Ascella Images
 ### Linux
 
 - Download Sharenix [github.com/Francesco149/sharenix](https://github.com/Francesco149/sharenix)
-
 - Update the default imgur.com uploader to use Ascella Uploader
 - Change the request URL to the one in /profile
 - Change the "URL" to "URL": "$json:url$"
 - Adjust the keybinds as needed in the app
-- [example config](https://gist.github.com/SkyBlockDev/c717c68d19068d0c7bcc9d3cd500d189)
+- [example config](https://gist.github.com/Tricked-dev/c717c68d19068d0c7bcc9d3cd500d189)
 
 ### MacOs
 
 - Switch to linux it's better
-
-```
-
-```

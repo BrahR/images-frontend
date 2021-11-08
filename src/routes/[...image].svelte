@@ -32,9 +32,9 @@
 </script>
 
 <script lang="ts">
-	export let user_name;
+	export let user_name: string;
 	export let embed: Record<string, string> = {};
-	export let url;
+	export let url: string;
 	import '../image.css';
 	import '../app.css';
 </script>
