@@ -53,19 +53,19 @@
 	{/if}
 
 	<meta property="og:type" content="website" />
-	<meta property="og:image" content={`https://api.tricked.pro/images/raw/${url}`} />
+	<meta property="og:image" content={`https://ascella.wtf/images/raw/${url}`} />
 	<meta property="twitter:card" content="summary_large_image" />
 	<meta property="theme-color" content={embed.color} />
 </svelte:head>
 
 <div class="main">
 	<p class="text text-white">captured by {user_name}</p>
-	<a href={`https://api.tricked.pro/images/raw/${url}`}>
+	<a href={`https://ascella.wtf/images/raw/${url}`}>
 		<img
 			style={`border: 9px solid ${embed.color || '#00a41b'}`}
 			class="image"
 			alt=""
-			src={`https://api.tricked.pro/images/raw/${url}`}
+			src={`https://ascella.wtf/images/raw/${url}`}
 		/>
 	</a>
 </div>

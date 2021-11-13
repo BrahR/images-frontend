@@ -14,7 +14,7 @@
 	async function create() {
 		console.log(value);
 		if (value == '') return;
-		let res = await fetch('https://api.tricked.pro/paste', {
+		let res = await fetch('https://ascella.wtf/paste', {
 			method: 'POST',
 			headers: {
 				'content-type': 'application/json'
