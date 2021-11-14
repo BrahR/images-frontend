@@ -17,7 +17,6 @@
 			description: 'A simple dashboard to change your domain and other settings.',
 			image: '/dashboard.png'
 		},
-		{},
 		{
 			title: 'What are you waiting for?',
 			description:
@@ -56,26 +55,22 @@
 			</p>
 		</div>
 		<div
-			class="grid justify-center content-center items-center pt-3 ascella-grid m-auto width-full gap-4"
+			class="grid justify-center content-center items-center pt-3 ascella-grid m-auto width-full gap-4 box-container"
 		>
 			{#each features as feature}
-				{#if !feature.title}
-					<div class=" min-h-[22rem] border-md p-3" />
-				{:else}
-					<div class="bg-gray-700 min-h-[22rem] border-md p-3 max-w-full">
-						<div class="pb-2 max-w-full">
-							<img alt="" src={feature.image} class="max-w-full object-cover w-full h-40" />
+				<div class="box">
+					<div class="pb-2 max-w-full">
+						<img alt="" src={feature.image} class="max-w-full object-cover w-full h-40" />
+					</div>
+					<div class="text-white w-full h-full max-w-full">
+						<div>
+							<p class="text-xl title">{feature.title}</p>
 						</div>
-						<div class="text-white w-full h-full max-w-full">
-							<div>
-								<p class="text-xl">{feature.title}</p>
-							</div>
-							<div>
-								<p>{feature.description}</p>
-							</div>
+						<div>
+							<p class="desc">{feature.description}</p>
 						</div>
 					</div>
-				{/if}
+				</div>
 			{/each}
 		</div>
 	</div>

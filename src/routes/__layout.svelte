@@ -137,7 +137,7 @@
 
 	<div class="pb-7" />
 	<div
-		class="transform no-underline text-gray-500 hover:text-white min-h-full border-t-2 border-gray-600 hover:border-white pt-6"
+		class="transform no-underline text-gray-500 hover:text-white min-h-full border-t-2 border-gray-600 hover:border-white pt-6 footer"
 	>
 		<div class="flex-auto flex list-none">
 			{#each bottomLinks as links}
