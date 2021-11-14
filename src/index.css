@@ -1,3 +1,57 @@
-.ascella-grid {
-	grid-template-columns: repeat(auto-fit, minmax(34rem, 1fr));
+.box-container {
+	margin: 20px !important;
+	grid-template-areas:
+		'box1 box2 box3'
+		' . box4 .';
+}
+
+.box {
+	padding: 0.75rem;
+	background-color: rgba(55, 65, 81, 1);
+	max-width: 100%;
+	min-height: 22rem;
+}
+
+.box:nth-child(1) {
+	grid-area: box1;
+}
+.box:nth-child(2) {
+	grid-area: box2;
+}
+.box:nth-child(3) {
+	grid-area: box3;
+}
+.box:nth-child(4) {
+	grid-area: box4;
+}
+
+/* i think i did what you want here, this isn't necessary but it made it look better imo, i also added comments on the classes that i am gonna use, so you can see it better and decide if you want to keep it or not*/
+
+.title {
+	text-align: center;
+	font-size: 25px !important;
+	margin-block: 20px;
+}
+
+.desc {
+	font-weight: lighter;
+}
+
+.footer {
+	padding-bottom: 20px;
+	transition: 0.3s ease-in-out;
+}
+
+.footer > div {
+	width: fit-content;
+	margin: auto;
+}
+
+.footer > div > div > u {
+	display: flex;
+}
+
+#main > div > a,
+.footer > div > div > u > li > a {
+	transition: all 0.3s ease-in-out;
 }
