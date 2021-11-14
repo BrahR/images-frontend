@@ -54,7 +54,7 @@
 				>
 			</p>
 		</div>
-		<div class="grid box-container">
+		<div class="box-container">
 			{#each features as feature}
 				<div class="box">
 					<div class="pb-2 max-w-full">
