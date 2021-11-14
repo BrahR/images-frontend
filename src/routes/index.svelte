@@ -54,9 +54,7 @@
 				>
 			</p>
 		</div>
-		<div
-			class="grid justify-center content-center items-center pt-3 ascella-grid m-auto width-full gap-4 box-container"
-		>
+		<div class="grid box-container">
 			{#each features as feature}
 				<div class="box">
 					<div class="pb-2 max-w-full">
