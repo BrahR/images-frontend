@@ -60,7 +60,7 @@
 					<div class="pb-2 max-w-full">
 						<img alt="" src={feature.image} class="max-w-full object-cover w-full h-40" />
 					</div>
-					<div class="text-white w-full h-full max-w-full">
+					<div class="text-white w-full h-full max-w-full css-tips-with-abd">
 						<div>
 							<p class="text-xl title">{feature.title}</p>
 						</div>
