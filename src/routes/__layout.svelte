@@ -1,3 +1,9 @@
+<script context="module" lang="ts">
+	export function load({ session }: any) {
+		return { props: { name: session?.user?.name } };
+	}
+</script>
+
 <script lang="ts">
 	import '../app.css';
 	import '../roboto.css';
@@ -76,7 +82,7 @@
 
 	let show = false; // menu state
 	let menu = null; // menu wrapper DOM reference
-
+	export let name: string;
 	onMount(() => {
 		// if (window.location.hostname !== 'ascella.host' && window.location.hostname !== 'localhost') {
 		// 	goto(`https://www.ascella.host${window.location.pathname}`);
@@ -104,6 +110,11 @@
 			document.removeEventListener('keyup', handleEscape, false);
 		};
 	});
+
+	function gnome() {
+		let audio = new Audio('woo.mp3');
+		audio.play();
+	}
 </script>
 
 <template bind:this={menu}>
@@ -129,6 +140,9 @@
 					class="p-3 hover:bg-green-700">{link.a}</a
 				>
 			{/each}
+		{/if}
+		{#if name}
+			<p on:click={gnome} class="text-right p-3 cursor-pointer">Welcome {name}</p>
 		{/if}
 	</div>
 
