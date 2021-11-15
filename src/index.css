@@ -7,7 +7,6 @@
 	gap: 1rem;
 	padding-top: 0.75rem;
 	grid-template-columns: 1fr 1fr 1fr;
-	overflow: hidden;
 }
 
 @media (max-width: 1660px) {
@@ -34,7 +33,9 @@
 	padding: 0.75rem;
 	background-color: rgba(55, 65, 81, 1);
 	max-width: 100%;
+	overflow: hidden;
 	min-height: 22rem;
+	height: fit-content !important;
 }
 
 .box:nth-child(1) {
@@ -48,35 +49,4 @@
 }
 .box:nth-child(4) {
 	grid-area: box4;
-}
-
-/* i think i did what you want here, this isn't necessary but i think it looks better, so you can see it better and decide if you want to keep it or not*/
-
-.title {
-	text-align: center;
-	font-size: 25px !important;
-	margin-block: 20px;
-}
-
-.desc {
-	font-weight: lighter;
-}
-
-.footer {
-	padding-bottom: 20px;
-	transition: 0.3s ease-in-out;
-}
-
-.footer > div {
-	width: fit-content;
-	margin: auto;
-}
-
-.footer > div > div > u {
-	display: flex;
-}
-
-#main > div > a,
-.footer > div > div > u > li > a {
-	transition: all 0.3s ease-in-out;
 }

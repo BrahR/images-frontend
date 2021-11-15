@@ -36,3 +36,34 @@ body {
 	background-color: #04aa6d;
 	color: white;
 }
+
+/* i think i did what you want here, this isn't necessary but i think it looks better, so you can see it better and decide if you want to keep it or not*/
+
+.title {
+	text-align: center;
+	font-size: 25px !important;
+	margin-block: 20px;
+}
+
+.desc {
+	font-weight: lighter;
+}
+
+.footer {
+	padding-bottom: 20px;
+	transition: 0.3s ease-in-out;
+}
+
+.footer > div {
+	width: fit-content;
+	margin: auto;
+}
+
+.footer > div > div > u {
+	display: flex;
+}
+
+#main > div > a,
+.footer > div > div > u > li > a {
+	transition: all 0.3s ease-in-out;
+}
