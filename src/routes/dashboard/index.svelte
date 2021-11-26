@@ -8,7 +8,9 @@
 	export let id: string;
 	export let key: string;
 	async function downloadConfig() {
-		let blob = await fetch(`https://ascella.wtf/images/config/${id}/${key}`).then((r) => r.blob());
+		let blob = await fetch(`https://ascella.wtf/v2/ascella/config/${id}/${key}`).then((r) =>
+			r.blob()
+		);
 		let url = URL.createObjectURL(blob);
 
 		const anchor = document.createElement('a');

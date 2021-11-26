@@ -1,10 +1,10 @@
 export async function getImage(i: string): Promise<any> {
-	return await fetch(`https://ascella.wtf/images/stats/${i}`)
+	return await fetch(`https://ascella.wtf/v2/ascella/view/${i}/stats`)
 		.catch(() => undefined)
 		.then((r) => r.json());
 }
 export async function getDomains(): Promise<any> {
-	return await fetch(`https://ascella.wtf/images/domains`)
+	return await fetch(`https://ascella.wtf/v2/ascella/domains`)
 		.catch(() => undefined)
 		.then((r) => r.json());
 }

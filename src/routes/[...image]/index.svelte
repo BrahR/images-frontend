@@ -9,7 +9,7 @@
 	/**
 	 * @type {import('@sveltejs/kit').Load}
 	 */
-	export async function load({ page }) {
+	export async function load({ page, session }) {
 		const { image } = page.params;
 		let params = image?.split('/');
 
@@ -26,18 +26,30 @@
 		}
 
 		return {
-			props: { ...data, url: params[params?.length - 1] }
+			props: { ...data, url: params[params?.length - 1], visitor_name: session.user.name }
 		};
 	}
 </script>
 
 <script lang="ts">
 	export let user_name: string;
+	export let id: string;
 	export let image_size: string = '10kb';
 	export let embed: Record<string, string> = {};
 	export let url: string;
+	export let visitor_name: string | undefined;
+	export let visitor_id: number | undefined;
+	export let visitor_key: number | undefined;
 	import '../../image.css';
 	import '../../app.css';
+	function make_public() {
+		console.log({
+			id,
+			visitor_id,
+			visitor_key,
+			visitor_name
+		});
+	}
 </script>
 
 <svelte:head>
@@ -63,7 +75,7 @@
 	<meta property="theme-color" content={embed.color} />
 	<meta property="og:author" content={user_name} />
 
-	<meta property="og:image" content={`https://ascella.wtf/images/raw/${url}`} />
+	<meta property="og:image" content={`https://ascella.wtf/v2/ascella/view/${url}`} />
 	<meta property="og:type" content="website" />
 	<meta property="twitter:card" content="summary_large_image" />
 </svelte:head>
@@ -90,15 +102,17 @@
 		<!-- to bar right  -->
 		<ul class="flex items-center">
 			<li class="">
+				{visitor_name}
 				{user_name}
 			</li>
 		</ul>
 	</nav>
 </div>
 <div class="main">
-	<a href={`https://ascella.wtf/images/raw/${url}`}>
-		<img class="image" alt="" src={`https://ascella.wtf/images/raw/${url}`} />
+	<a href={`https://ascella.wtf/v2/ascella/view/${url}`}>
+		<img class="image" alt="" src={`https://ascella.wtf/v2/ascella/view/${url}`} />
 	</a>
+	<button onclick={make_public}> Make public </button>
 </div>
 <footer
 	style={`border-color: ${embed.color || '#00a41b'}`}

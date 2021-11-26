@@ -1,6 +1,6 @@
 <script context="module" lang="ts">
 	export async function load({ session }: any) {
-		let domains = await fetch('https://ascella.wtf/images/domains').then((r) => r.json());
+		let domains = await fetch('https://ascella.wtf/v2/ascella/domains').then((r) => r.json());
 		return {
 			props: {
 				key: session?.user?.key,
