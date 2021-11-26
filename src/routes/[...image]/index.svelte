@@ -112,7 +112,7 @@
 	<a href={`https://ascella.wtf/v2/ascella/view/${url}`}>
 		<img class="image" alt="" src={`https://ascella.wtf/v2/ascella/view/${url}`} />
 	</a>
-	<button onclick={make_public}> Make public </button>
+	<!-- <button onclick={make_public}> Make public </button> -->
 </div>
 <footer
 	style={`border-color: ${embed.color || '#00a41b'}`}
