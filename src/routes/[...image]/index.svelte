@@ -26,7 +26,7 @@
 		}
 
 		return {
-			props: { ...data, url: params[params?.length - 1], visitor_name: session.user.name }
+			props: { ...data, url: params[params?.length - 1], visitor_name: session?.user?.name }
 		};
 	}
 </script>

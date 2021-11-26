@@ -9,8 +9,10 @@ export async function handle({ request, resolve }) {
 
 export function getSession({ locals }) {
 	return {
-		user: locals.user && {
-			...locals.user
-		}
+		user:
+			(locals.user && {
+				...locals.user
+			}) ||
+			{}
 	};
 }
