@@ -102,7 +102,6 @@
 		<!-- to bar right  -->
 		<ul class="flex items-center">
 			<li class="">
-				{visitor_name}
 				{user_name}
 			</li>
 		</ul>
