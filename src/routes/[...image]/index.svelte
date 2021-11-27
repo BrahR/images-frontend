@@ -42,14 +42,6 @@
 	export let visitor_key: number | undefined;
 	import '../../image.css';
 	import '../../app.css';
-	function make_public() {
-		console.log({
-			id,
-			visitor_id,
-			visitor_key,
-			visitor_name
-		});
-	}
 </script>
 
 <svelte:head>
@@ -115,15 +107,7 @@
 </div>
 <footer
 	style={`border-color: ${embed.color || '#00a41b'}`}
-	class="bg-gray-700
-             text-white text-center
-             border-t-2 
-             fixed
-             inset-x-0
-             bottom-0
-			 h-8
-			 flex justify-between
-             "
+	class="bg-gray-700 text-white text-center border-t-2 fixed inset-x-0 bottom-0 h-8 flex justify-between"
 >
 	<ul class="flex items-center" />
 	<ul class="flex items-center">
