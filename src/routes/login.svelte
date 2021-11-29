@@ -29,11 +29,18 @@
 	let pass;
 </script>
 
-<section>
+<section class="login">
 	<form on:submit|preventDefault={login}>
-		<input class="bg-gray-900" bind:value={username} />
-		<input class="bg-gray-900" bind:value={pass} />
+		<input class="input" bind:value={username} />
+		<input class="input" bind:value={pass} />
 
 		<button> LOGIN! </button>
+	</form>
+</section>
+
+<section>
+	<form action="">
+		<input class="idk" />
+		<input class="idk" />
 	</form>
 </section>
