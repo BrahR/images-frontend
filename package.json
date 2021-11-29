@@ -44,6 +44,7 @@
 		"remark-abbr": "^1.4.1",
 		"remark-github": "^11.1.1",
 		"sass": "^1.43.3",
+		"svelte-media-query": "^1.1.2",
 		"svelte-prismjs": "^1.0.2"
 	}
 }

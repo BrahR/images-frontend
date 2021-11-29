@@ -5,6 +5,7 @@
 </script>
 
 <script lang="ts">
+	import MediaQuery from 'svelte-media-query';
 	import '../app.css';
 	import '../roboto.css';
 	const topLinks = [
@@ -46,6 +47,12 @@
 			{
 				href: 'https://dash.ascella.host',
 				a: 'Dashboard'
+			}
+		],
+		[
+			{
+				href: 'https://discord.gg/mY8zTARu4g',
+				a: 'Discord'
 			}
 		]
 	];
@@ -117,34 +124,77 @@
 	}
 </script>
 
-<template bind:this={menu}>
-	<div class="topnav p-d gap-2 break-words bg-gray-700 ">
-		{#each topLinks as link}
-			<a class="p-3 hover:bg-green-700" href={link.href}>{link.a}</a>
-		{/each}
+<template bind:this={menu} class="flex-1 flex flex-col">
+	<!--- Im crying myself too but i cba to deal with css sorry o7-->
+	<MediaQuery query="(max-width: 1281px)" let:matches>
+		{#if !matches}
+			<nav class="topnav p-d gap-2 break-words px-4 flex justify-between h-8">
+				<ul class="flex items-center">
+					<li>
+						{#each topLinks as link}
+							<a class="p-3 hover:bg-green-700 link" href={link.href}>{link.a}</a>
+						{/each}
+					</li>
+					<li>
+						<!-- svelte-ignore a11y-missing-attribute -->
+						<a
+							class={`p-3 cursor-pointer hover:bg-green-700 ${show ? 'bg-green-800' : ''} link`}
+							on:click={() => (show = !show)}
+						>
+							Documentation
+						</a>
+					</li>
+					{#if show}
+						{#each otherLinks as link}
+							<li>
+								<a
+									transition:fly={{ x: 1500, y: 0, duration: 800 }}
+									href={link.href}
+									class="p-3 hover:bg-green-700 link">{link.a}</a
+								>
+							</li>
+						{/each}
+					{/if}
+				</ul>
 
-		<!-- svelte-ignore a11y-missing-attribute -->
-
-		<a
-			class={`p-3 cursor-pointer hover:bg-green-700 ${show ? 'bg-green-800' : ''}`}
-			on:click={() => (show = !show)}
-		>
-			Documentation
-		</a>
-
-		{#if show}
-			{#each otherLinks as link}
+				{#if name}
+					<p on:click={gnome} class="text-right p-3 cursor-pointer">Welcome {name}</p>
+				{:else}
+					<a
+						href="/docs/signup"
+						class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
+					>
+						Signup
+					</a>
+				{/if}
+			</nav>
+		{:else}
+			<div class="topnav p-d gap-2 break-words bg-gray-700 ">
+				{#each topLinks as link}
+					<a class="p-3 hover:bg-green-700" href={link.href}>{link.a}</a>
+				{/each}
+				<!-- svelte-ignore a11y-missing-attribute -->
 				<a
-					transition:fly={{ x: 1500, y: 0, duration: 800 }}
-					href={link.href}
-					class="p-3 hover:bg-green-700">{link.a}</a
+					class={`p-3 cursor-pointer hover:bg-green-700 ${show ? 'bg-green-800' : ''}`}
+					on:click={() => (show = !show)}
 				>
-			{/each}
+					Documentation
+				</a>
+				{#if show}
+					{#each otherLinks as link}
+						<a
+							transition:fly={{ x: 1500, y: 0, duration: 800 }}
+							href={link.href}
+							class="p-3 hover:bg-green-700">{link.a}</a
+						>
+					{/each}
+				{/if}
+				{#if name}
+					<p on:click={gnome} class="text-right p-3 cursor-pointer">Welcome {name}</p>
+				{/if}
+			</div>
 		{/if}
-		{#if name}
-			<p on:click={gnome} class="text-right p-3 cursor-pointer">Welcome {name}</p>
-		{/if}
-	</div>
+	</MediaQuery>
 
 	<div class="pb-4" />
 	<slot />
