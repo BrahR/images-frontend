@@ -1,8 +1,11 @@
 .image {
-	box-shadow: 12px 10px 5px 0px rgba(0, 0, 0, 0.75);
-	background-color: rgb(30, 33, 37);
-	border-radius: 15px;
-	padding: 10px;
+	margin-top: auto;
+	margin-bottom: auto;
+
+	display: flex;
+
+	padding: auto;
+	padding-top: auto;
 	max-width: 80rem;
 	max-height: 60rem;
 	width: auto;
@@ -10,10 +13,13 @@
 }
 
 .main {
+	padding-top: 4rem;
+	margin-top: auto;
+	margin-bottom: auto;
+
 	display: flex;
-	align-items: center;
-	flex-direction: column;
 	justify-content: center;
+	align-items: center;
 }
 .text {
 	/* padding-top: 0.3rem; */
