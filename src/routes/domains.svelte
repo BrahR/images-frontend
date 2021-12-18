@@ -47,25 +47,8 @@
 
 <script lang="ts">
 	export let data: any[];
-
-	import '../app.css';
-	let desc =
-		'Ascella Images is an extremely fast image uploader built with the newest technologies.';
-	let title = 'Domains - Ascella Uploader - The fastest image uploader';
+	import '../css/app.scss';
 </script>
-
-<svelte:head>
-	<title>Domains - Ascella Image Uploader</title>
-	<meta name="title" content={title} />
-	<meta name="description" content={desc} />
-	<meta property="og:title" content={title} />
-	<meta property="og:description" content={desc} />
-	<meta property="og:type" content="website" />
-	<meta property="twitter:title" content={title} />
-	<meta property="twitter:description" content={desc} />
-
-	<meta property="theme-color" content="#1b8aeb" />
-</svelte:head>
 
 <div>
 	<div class="w-[30rem] m-auto">

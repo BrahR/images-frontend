@@ -24,24 +24,8 @@
 			image: '/redeem.png'
 		}
 	];
-	import '../index.css';
-	let desc =
-		'Ascella Uploader is an extremely fast image uploader built with the newest technologies.';
-	let title = 'Ascella Uploader - The fastest image uploader';
+	import '../css/index.scss';
 </script>
-
-<svelte:head>
-	<title>Ascella Image Uploader</title>
-	<meta name="title" content={title} />
-	<meta name="description" content={desc} />
-	<meta property="og:title" content={title} />
-	<meta property="og:description" content={desc} />
-	<meta property="og:type" content="website" />
-	<meta property="twitter:title" content={title} />
-	<meta property="twitter:description" content={desc} />
-
-	<meta property="theme-color" content="#1b8aeb" />
-</svelte:head>
 
 <div>
 	<div class="m-auto">
