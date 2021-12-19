@@ -70,13 +70,13 @@ body {
 
 // e
 
-.nav {
-	margin-bottom: 90px;
+nav {
 	background-color: rgb(51 65 85);
 }
 
 .all {
-	display: flex;
+	display: grid;
+	grid-template-columns: repeat(4, auto);
 	align-items: center;
 	justify-content: space-around;
 	padding-inline: 3rem;
@@ -100,7 +100,7 @@ body {
 }
 
 .btns {
-	display: inherit;
+	display: flex;
 	align-items: center;
 }
 
@@ -127,6 +127,7 @@ body {
 	line-height: 1.75rem;
 	margin-right: auto;
 	margin-left: auto;
+	z-index: 50;
 }
 
 .btn:hover {
@@ -136,8 +137,9 @@ body {
 }
 
 .e {
-	margin-right: auto;
+	width: 90px;
 	position: relative;
+	justify-self: flex-start;
 }
 
 .ee {
@@ -146,22 +148,19 @@ body {
 	margin-left: 5px;
 }
 
-.other input {
+.other svg {
+	display: initial;
+	transform: rotate(0deg);
+	transition: 0.2s ease-in-out;
+}
+
+#input {
 	position: absolute;
 	width: 81px;
 	height: 32px;
 	z-index: 10;
 	top: -0.6rem;
 	opacity: 0;
-}
-
-.other svg {
-	display: initial;
-	transform: rotate(0deg);
-	transition: 0.6s ease-in-out;
-}
-
-#input {
 }
 
 #input:checked ~ .list {
@@ -178,10 +177,13 @@ body {
 	span {
 		padding: 0.4rem 0.7rem;
 		background-color: rgb(100 116 139);
+		border: 1px solid white;
+		transition: 0.2s ease-in-out;
 	}
 
-	span:hover {
+	#input:hover ~ span {
 		background-color: rgb(51 65 85);
+		color: #1f2937;
 	}
 
 	.list {
@@ -212,26 +214,8 @@ body {
 	}
 }
 
-.more-css-tips {
-	cursor: pointer;
-}
-
-.more-css-tips * {
-	font-weight: initial !important;
-	transition: all 0.2s ease-in-out;
-}
-
-.more-css-tips > span:hover * {
-	color: #1f2937;
-}
-
-.more-css-tips:hover > div {
-	opacity: 1 !important;
-	visibility: visible !important;
-	scale: 1 !important;
-	transform: translateY(0);
-}
-
-.more-css-tips ul li:hover {
-	background-color: rgb(37, 48, 63);
+@media (max-width: 800px) {
+	.ascella ~ .btn {
+		order: 2 !important;
+	}
 }
