@@ -88,6 +88,24 @@
 			}
 		};
 
+    // let other: HTMLElement = document.querySelector(".other");
+    // let svg: HTMLElement = document.querySelector(".other svg");
+    // let list: HTMLElement = document.querySelector(".ee ul");
+
+    // other.addEventListener("click", () => {
+    //   let listHeight: number = list.scrollHeight;
+    //   console.log(list);
+      
+  	//   if (list.style.height != "0px") {
+  	// 	  list.style.height = "0px";
+  	// 	  svg.style.transform = "rotate(90deg)";
+        
+  	//   } else {
+  	//   	list.style.height = listHeight + "px";
+  	// 	  svg.style.transform = "rotate(0deg)";
+  	//   }
+    // });
+
 		// add events when element is added to the DOM
 		document.addEventListener('click', handleOutsideClick, false);
 		document.addEventListener('keyup', handleEscape, false);
@@ -131,6 +149,45 @@
 </svelte:head>
 
 <template bind:this={menu} class="flex-1 flex flex-col">
+  <nav class="nav">
+    <div class="all">
+      <a class="ascella" href="https://ascella.host">Ascella.host</a>
+      <div class="btns">
+        <ul>
+          <li><a class="btn" href="https://dash.ascella.host" > Dashboard </a></li>
+          <li><a class="btn" href="/"> Home </a></li>
+          <li><a class="btn" href="https://discord.gg/mY8zTARu4g" > Discord </a></li>
+        </ul>
+      </div>
+      <div class="e">
+        <div class="ee">
+          <div class="other">
+            <input id="input" type="checkbox" checked>
+            <span>Other
+              <svg class="w-5 h-5 -mr-1" viewBox="0 0 20 20" fill="currentColor">
+                <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd" />
+              </svg>
+            </span>
+            <div class="list">
+              <ul>
+				  	  {#each otherLinks as link}
+                <li>
+                  <a
+				  		  	  href={link.href}
+				  		  	  tabindex="0"
+				  		  	  role="menuitem">{link.a}</a
+				  		    >
+                </li>
+				  	  {/each}
+				      </ul>      
+            </div>
+          </div>
+          
+        </div>
+      </div>
+      <a class="btn" href="/docs/signup">Create an account</a>
+    </div>
+  </nav>
 	<nav
 		class="flex items-center justify-between flex-wrap bg-slate-700 py-4 lg:px-12 shadow border-solid border-t-2 border-lime-500"
 	>
