@@ -141,29 +141,32 @@
           <li><a class="btn" href="https://discord.gg/mY8zTARu4g" > Discord </a></li>
         </ul>
       </div>
-      <div class="e">
-          <div class="ee">
-            <div class="other">
-              <input id="input" type="checkbox" checked>
-              <span>Other
-                <svg class="w-5 h-5 -mr-1" viewBox="0 0 20 20" fill="currentColor">
-                  <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd" />
-                </svg>
-              </span>
-              <div class="list">
-                <ul>
-				    	  {#each otherLinks as link}
-                  <li>
-                    <a
-				    		  	  href={link.href}
-				    		  	  tabindex="0"
-				    		  	  role="menuitem">{link.a}</a
-				    		    >
-                  </li>
-				    	  {/each}
-				        </ul>      
-              </div>
-            </div>
+        <div class="other">
+          <input id="input" type="checkbox" checked>
+          <label for="input">Other
+            <svg class="w-5 h-5 -mr-1" viewBox="0 0 20 20" fill="currentColor">
+              <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd" />
+            </svg>
+          </label>
+          <div class="list">
+            <ul>
+				    {#each otherLinks as link}
+              <li>
+                <div>
+                  <slide><a
+				  	  	    href={link.href}
+				  	    	  tabindex="0"
+				  	  	    role="menuitem">{link.a}</a
+				  	      ></slide>
+                  <a
+				  	  	    href={link.href}
+				  	    	  tabindex="0"
+				  	  	    role="menuitem">{link.a}</a
+				  	      >
+                </div>
+              </li>
+				    {/each}
+				    </ul>      
           </div>
         </div>
       <a class="btn" href="/docs/signup">Create an account</a>
