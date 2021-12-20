@@ -73,6 +73,10 @@ body {
 nav {
 	background-color: rgb(51 65 85);
 
+	* {
+		transition: 0.2s ease-in-out;
+	}
+
 	.all {
 		display: grid;
 		grid-template:
