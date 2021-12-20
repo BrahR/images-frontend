@@ -191,7 +191,6 @@ nav {
 
 				div {
 					transition: 0.2s ease-in-out;
-
 					> a {
 						color: rgb(229 231 235);
 						padding: 0.5rem 1rem;
@@ -213,8 +212,25 @@ nav {
 					top: 0;
 					left: 0;
 					right: 0;
-					// 					left: 0;
-					// transform: translateX(0%);
+				}
+
+				slide:before {
+					content: ' ';
+					background-color: #1f2937;
+					position: absolute;
+					top: 0;
+					right: 0;
+					bottom: 0;
+					left: 0;
+					z-index: -1;
+					transition: 0.3s ease-in-out;
+					transform: scaleX(0);
+					transform-origin: bottom left;
+				}
+
+				slide:hover::before {
+					transform: scaleX(1);
+					transform-origin: bottom right;
 				}
 			}
 		}
@@ -223,7 +239,7 @@ nav {
 	.btn:hover {
 		border-color: rgb(20 184 166);
 		background-color: rgb(17 94 89);
-		color: rgb(255 255 255);
+		color: rgb(255 255 255) !important;
 	}
 
 	.ascella ~ .btn {
