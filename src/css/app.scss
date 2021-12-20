@@ -75,12 +75,12 @@ nav {
 }
 
 .all {
-	display: grid;
-	grid-template-columns: repeat(4, auto);
+	display: flex;
 	align-items: center;
 	justify-content: space-around;
 	padding-inline: 3rem;
 	height: 82px;
+	flex-flow: row wrap;
 }
 
 .ascella {
@@ -100,7 +100,7 @@ nav {
 }
 
 .btns {
-	display: flex;
+	display: inherit;
 	align-items: center;
 }
 
@@ -138,13 +138,10 @@ nav {
 
 .e {
 	width: 90px;
-	position: relative;
-	justify-self: flex-start;
+	height: 32px;
 }
 
 .ee {
-	position: absolute;
-	top: -0.7rem;
 	margin-left: 5px;
 }
 
@@ -214,8 +211,29 @@ nav {
 	}
 }
 
-@media (max-width: 800px) {
+@media (max-width: 784px) {
+	.all {
+		height: 164px;
+	}
+
+	.ascella {
+		order: -1;
+	}
+
 	.ascella ~ .btn {
-		order: 2 !important;
+		order: -1;
+	}
+}
+
+@media (max-width: 550px) {
+	// break {
+	// 	flex-basis: 100%;
+	// 	width: 0px;
+	// 	height: 0px;
+	// 	overflow: hidden;
+	// }
+
+	.btns {
+		flex-flow: row wrap;
 	}
 }
